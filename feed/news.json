@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T00:21:24.828144+07:00",
+  "updatedAt": "2026-07-03T01:58:18.606770+07:00",
   "total": 200,
   "sources": [
     "VnExpress",
@@ -10,6 +10,66 @@
     "24HMoney"
   ],
   "articles": [
+    {
+      "id": "6ffe62d35cd2",
+      "title": "Điều gì xảy ra với đường huyết khi bạn ăn kem?",
+      "summary": "Ăn kem có thể làm tăng đường huyết nhưng mức độ và thời điểm tăng không chỉ phụ thuộc vào lượng đường mà còn bị ảnh hưởng bởi chất béo, protein, khẩu phần ăn.",
+      "url": "https://vnexpress.net/dieu-gi-xay-ra-voi-duong-huyet-khi-ban-an-kem-5092641.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T01:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "9561cf12c790",
+      "title": "Những đống đổ nát ở Kiev sau đòn tập kích quy mô lớn của Nga",
+      "summary": "Nga phóng 570 vũ khí các loại để tập kích Ukraine, mục tiêu chính là thủ đô Kiev, khiến ít nhất 17 người chết và nhiều công trình hư hại.",
+      "url": "https://vnexpress.net/nhung-dong-do-nat-o-kiev-sau-don-tap-kich-quy-mo-lon-cua-nga-5092599.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T01:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "792819d14502",
+      "title": "Tiêu thụ điện tăng bất thường, người phụ nữ kiểm tra rồi “chết lặng”: Âm thầm gánh khoản này suốt 17 năm, chủ đầu tư bị yêu cầu giải thích",
+      "summary": "Một người phụ nữ tại Trung Quốc bàng hoàng phát hiện mình đã vô tình thanh toán tiền điện cho 7 hộ dân khác trong suốt 17 năm chỉ sau khi nhận thấy lượng điện tiêu thụ ở tầng hầm tăng bất thường.",
+      "url": "https://kenh14.vn/tieu-thu-dien-tang-bat-thuong-nguoi-phu-nu-kiem-tra-roi-chet-lang-am-tham-ganh-khoan-nay-suot-17-nam-chu-dau-tu-bi-yeu-cau-giai-thich-21526070300214299.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-03T01:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "3241c0a407fa",
+      "title": "Bờ sông Sài Gòn kín người xem pháo hoa tầm cao 15 phút",
+      "summary": "Đông đảo người dân và du khách đổ về bờ sông Sài Gòn tối 2/7 để xem màn pháo hoa nghệ thuật kéo dài 15 phút, mừng 50 năm ngày thành phố mang tên Chủ tịch Hồ Chí Minh.",
+      "url": "https://vnexpress.net/bo-song-sai-gon-kin-nguoi-xem-phao-hoa-tam-cao-15-phut-5092828.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:48:27+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "99d08aa2d3ec",
+      "title": "Trời phú cho Việt Nam \"mỏ vàng thơm\" lớn thứ 2 thế giới: Thị trường \"quý tộc\" toàn cầu rất ưa chuộng",
+      "summary": "Sản vật này mang lại giá trị xuất khẩu hàng chục triệu đô cho Việt Nam mỗi năm.",
+      "url": "https://kenh14.vn/troi-phu-cho-viet-nam-mo-vang-thom-lon-thu-2-the-gioi-thi-truong-quy-toc-toan-cau-rat-ua-chuong-215260703003222181.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-03T00:29:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "d73d7594c1c4",
+      "title": "6h00 ngày 3/7 Bồ Đào Nha đấu Croatia: Màn đối đầu đặc biệt của Ronaldo và Luka Modric, chờ trận cầu bùng nổ",
+      "summary": "Cập nhật thông tin trận đấu giữa đội tuyển Bồ Đào Nha và đội tuyển Croatia lúc 6h00 ngày 3/7 thuộc vòng 1/16 World Cup 2026.",
+      "url": "https://kenh14.vn/6h00-ngay-3-7-bo-dao-nha-dau-croatia-man-doi-dau-dac-biet-cua-ronaldo-va-luka-modric-cho-tran-cau-bung-no-215260702224021031.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-03T00:29:00+07:00",
+      "category": "Tin tức"
+    },
     {
       "id": "d6084ccda8b9",
       "title": "Từ số tiền 500 triệu đồng, công an xác minh, mời người đàn ông lên làm việc",
@@ -31,6 +91,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "844608663636",
+      "title": "Thịt bò ánh xanh có an toàn?",
+      "summary": "Tôi thấy nhiều miếng thịt bò có vệt óng ánh xanh, tím, lấp lánh như cầu vồng, có phải thịt bị hư hay tẩm hóa chất không? (Hoa, 29 tuổi, Hà Nội)",
+      "url": "https://vnexpress.net/thit-bo-anh-xanh-co-an-toan-5090801.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:04:00+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "bb87578c6592",
       "title": "Phát hiện cả một thế giới bí ẩn còn nguyên vẹn dưới lớp băng Nam Cực",
       "summary": "Những phát hiện này cho thấy quá khứ của Nam Cực vẫn còn bị khóa chặt dưới lớp băng nhiều đến mức nào.",
@@ -38,6 +108,16 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-03T00:04:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "9e3f18a04068",
+      "title": "Nhà sàn 150 m2 dùng năng lượng mặt trời giữa ruộng lúa",
+      "summary": "Ngôi nhà gỗ được đặt trên khu đất gần 8.000 m2, kết hợp nông trại, ao tích nước và hệ thống điện mặt trời.",
+      "url": "https://vnexpress.net/nha-san-150-m2-dung-nang-luong-mat-troi-giua-ruong-lua-5091684.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:02:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -51,6 +131,26 @@
       "category": "Tin tức"
     },
     {
+      "id": "ad3346a6dc9a",
+      "title": "Hình ảnh đầu tiên thấy tiết lộ về năng lực thiên bẩm của bạn",
+      "summary": "Không có đáp án nào đúng hay sai, bởi điều quan trọng chính là hình ảnh đầu tiên mà mắt bạn vô thức bắt gặp.",
+      "url": "https://vnexpress.net/hinh-anh-dau-tien-thay-tiet-lo-ve-nang-luc-thien-bam-cua-ban-5092527.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:01:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "f02a922aa8c1",
+      "title": "Hà Nội và nhiều tỉnh thành miền Bắc mưa to",
+      "summary": "(Dân trí) - Dự báo từ đêm 4 đến hết ngày 5/7, khu vực miền Bắc, tập trung ở Đông Bắc Bộ mưa to với lượng mưa phổ biến 70-130mm, riêng khu Đông Bắc cục bộ có nơi mưa trên 250mm.",
+      "url": "https://dantri.com.vn/thoi-tiet/ha-noi-va-nhieu-tinh-thanh-mien-bac-mua-to-20260702175254868.htm",
+      "source": "Dân Trí",
+      "sourceKey": "dantri",
+      "publishedAt": "2026-07-03T00:01:00+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "199f2c2212d3",
       "title": "7 năm trước Harry Kane tới Atlanta để xem thần tượng nâng cúp, đêm qua anh trở lại để tự tay cứu cả một giấc mơ",
       "summary": "Phút 86 trên sân Mercedes-Benz Stadium ở Atlanta, khi tuyển Anh đang đứng bên bờ một trong những thất bại xấu hổ nhất lịch sử các kỳ World Cup, Harry Kane nhận bóng giữa vòng vây hậu vệ CHDC Congo và sút thẳng vào nóc lưới.",
@@ -58,6 +158,116 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-03T00:01:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "b5f5f692a638",
+      "title": "Người vợ rơi xuống vực và bí mật chôn vùi 20 năm",
+      "summary": "David khai vợ đứng gần mép vực để chụp hình, rồi anh xoay người để chuyển ba lô ra khỏi khung hình, quay lại thì không thấy đâu.",
+      "url": "https://vnexpress.net/nguoi-vo-roi-xuong-vuc-va-bi-mat-chon-vui-20-nam-5092744.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:18+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "f7c3fc1a1a70",
+      "title": "Cao ốc và lối thoát lũ sông Hồng",
+      "summary": "Từ khi được mời góp ý đến lúc đồ án Quy hoạch Thủ đô tầm nhìn 100 năm được triển lãm, tôi luôn dành sự quan tâm đặc biệt tới hành lang sông Hồng.",
+      "url": "https://vnexpress.net/cao-oc-va-loi-thoat-lu-song-hong-5092815.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:16+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "a00f092a15f2",
+      "title": "Tôi sẵn sàng bán nhà giá rẻ cho con chứ không chia thừa kế sớm",
+      "summary": "Nếu cần nhà để ở, tôi sẵn sàng bán lại cho con căn nhà đang cho thuê với mức giá thấp hơn thị trường, chứ không có chuyện cho không.",
+      "url": "https://vnexpress.net/thua-ke-the-vi-toi-san-sang-ban-nha-gia-re-cho-con-chu-khong-chia-thua-ke-som-5092633.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "0ccb235210e6",
+      "title": "Cuộc sống trong những ngôi nhà dang dở ở Hà Nội",
+      "summary": "Sau khi bàn giao một phần diện tích cho các dự án giao thông, hàng loạt ngôi nhà bị cắt xén, trống hoác, người dân vẫn tiếp tục sinh sống với nhiều bất tiện.",
+      "url": "https://vnexpress.net/cuoc-song-trong-nhung-ngoi-nha-dang-do-o-ha-noi-5092609.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "3120b5c5ff6f",
+      "title": "Việc giao ngoài giờ hành chính, có bị kỷ luật nếu tôi không làm ngay?",
+      "summary": "Tối thứ ba tuần trước, tôi nhận được tin nhắn từ trưởng phòng yêu cầu xử lý gấp một số tài liệu để sáng hôm sau báo cáo lãnh đạo.",
+      "url": "https://vnexpress.net/viec-giao-ngoai-gio-hanh-chinh-co-bi-ky-luat-neu-toi-khong-lam-ngay-5092403.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "546acb76c182",
+      "title": "'Cú bắt tay' đẩy giá trứng ở Mỹ lên cao kỷ lục",
+      "summary": "Ba ông lớn ngành trứng tại Mỹ bị cáo buộc lợi dụng dịch cúm gia cầm để bí mật bắt tay thao túng giá, đẩy giá trứng lên mức kỷ lục.",
+      "url": "https://vnexpress.net/cu-bat-tay-day-gia-trung-o-my-len-cao-ky-luc-5092122.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "795ce8987726",
+      "title": "Các nước thu tiền bản quyền âm nhạc từ quán cà phê, nhà hàng khác Việt Nam ra sao?",
+      "summary": "Không chỉ Việt Nam, các nước Mỹ, Anh hay Singapore đều thu tiền bản quyền âm nhạc với nhà hàng, quán cà phê, nhưng cách tính rất khác nhau.",
+      "url": "https://vnexpress.net/cac-nuoc-thu-tien-ban-quyen-am-nhac-tu-quan-ca-phe-nha-hang-khac-viet-nam-ra-sao-5091838.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "3a74d188bc91",
+      "title": "Tại sao những 'nghĩa địa máy bay' thường đặt trên sa mạc?",
+      "summary": "Trên thế giới hiện có khoảng 8.000 máy bay hết vòng đời khai thác đang \"nghỉ ngơi\" trên các sa mạc, rừng rậm và bãi chứa và con số này đang tăng lên.",
+      "url": "https://vnexpress.net/tai-sao-nhung-nghia-dia-may-bay-thuong-dat-tren-sa-mac-5091666.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "40f267a9ca9d",
+      "title": "Cuộc sống tuổi trung niên của nghệ sĩ Nguyệt Hằng",
+      "summary": "Diễn viên Nguyệt Hằng, 53 tuổi, tận hưởng niềm vui từ công việc diễn xuất, giảng dạy, trân trọng sự bình an bên gia đình.",
+      "url": "https://vnexpress.net/cuoc-song-tuoi-trung-nien-cua-nghe-si-nguyet-hang-5091567.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "5b4e074e7c5f",
+      "title": "Nghi vấn truyện đoạt giải Khối Thịnh vượng chung do AI viết",
+      "summary": "Nhiều người cho rằng ''The Serpent in the Grove'' - đoạt quán quân giải thưởng truyện ngắn Khối Thịnh vượng chung - do AI sáng tác.",
+      "url": "https://vnexpress.net/nghi-van-truyen-doat-giai-khoi-thinh-vuong-chung-do-ai-viet-5092731.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "de8188caed14",
+      "title": "Trực tuyến Tây Ban Nha - Áo (2h ngày 3-7): Yamal, Oyarzabal đá chính",
+      "summary": "Ở trận đấu với Áo tại sân vận động SoFi, Tây Ban Nha sẽ ra sân với sơ đồ 4-3-2-1 với Oyarzabal đá cao nhất trên hàng tiền đạo, Yamal cũng sẽ xuất trận. Mời bạn đọc theo dõi diễn biến trên Tuổi Trẻ.",
+      "url": "https://tuoitre.vn/truc-tuyen-tay-ban-nha-ao-2h-ngay-3-7-ve-di-tiep-cho-tay-ban-nha-100260702085557391.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-03T00:00:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -81,6 +291,46 @@
       "category": "Tin tức"
     },
     {
+      "id": "1f8b801b13ca",
+      "title": "Thủ môn người Palestine thiệt mạng thương tâm ở Gaza",
+      "summary": "Thủ môn Palestine Saleem Al-Ashqar đã qua đời sau khi trúng hỏa lực từ xe tăng của lực lượng Israel vào ngày 1-7.",
+      "url": "https://tuoitre.vn/thu-mon-nguoi-palestine-thiet-mang-thuong-tam-o-gaza-10026070223364671.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-02T23:56:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "820ec0fbac72",
+      "title": "Thái Lan cùng 11 nước chống đường dây lừa đảo qua tổng đài, mua bán người",
+      "summary": "Đại diện lực lượng thực thi pháp luật của 11 quốc gia đã họp bàn tại tỉnh Chanthaburi (Thái Lan) nhằm tăng cường phối hợp chống các đường dây lừa đảo qua tổng đài, tội phạm công nghệ cao và mua bán người xuyên quốc gia.",
+      "url": "https://tuoitre.vn/thai-lan-cung-11-nuoc-chong-duong-day-lua-dao-qua-tong-dai-mua-ban-nguoi-100260702232944999.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-02T23:52:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "533822868f21",
+      "title": "Đại học Quốc gia Hà Nội: 100 điểm HSA tương đương 26 điểm khối A00",
+      "summary": "Thí sinh đạt 129/150 điểm HSA tương đương với 29,98 điểm thi tốt nghiệp THPT ở tổ hợp A00 (Toán, Lý, Hóa), còn 100 điểm HSA bằng 26 điểm.",
+      "url": "https://vnexpress.net/bang-quy-doi-diem-hsa-va-diem-thi-tot-nghiep-thpt-2026-cua-dai-hoc-quoc-gia-ha-noi-chi-tiet-nhat-5092820.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T23:43:23+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "b4963aead687",
+      "title": "Lưới điện lớn nhất nước Mỹ báo động trong nắng nóng cực đoan",
+      "summary": "PJM, nhà điều hành lưới điện lớn nhất Mỹ, cảnh báo về giá điện tăng vọt và tình trạng nghẽn đường dây truyền tải điện, trong bối cảnh nhu cầu tăng cao kỷ lục do nắng nóng.",
+      "url": "https://vnexpress.net/luoi-dien-lon-nhat-nuoc-my-bao-dong-trong-nang-nong-cuc-doan-5092628.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T23:38:19+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "abbdd0cda65a",
       "title": "Bác sĩ chỉ: 6 DẤU HIỆU cảnh báo suy thận, nhưng dễ bị người Việt nhầm với vấn đề tuổi tác và mệt mỏi",
       "summary": "Đây là những biểu hiện dễ bị nhầm lẫn với quá trình lão hóa hoặc tình trạng căng thẳng, đặc biệt ở người mắc bệnh tiểu đường và tăng huyết áp.",
@@ -88,6 +338,16 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T23:35:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "f57d3cb29440",
+      "title": "Đại học Quốc gia Hà Nội: 100 điểm HSA bằng 26 điểm tốt nghiệp A00",
+      "summary": "Tối 2-7, Đại học Quốc gia Hà Nội chính thức công bố bảng bách phân vị quy đổi tương đương giữa điểm thi đánh giá năng lực HSA với 4 tổ hợp truyền thống A00, B00, C00 và D01.",
+      "url": "https://tuoitre.vn/dai-hoc-quoc-gia-ha-noi-100-diem-hsa-bang-26-diem-tot-nghiep-a00-100260701072914442.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-02T23:34:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -111,6 +371,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "56e4bff98d3c",
+      "title": "Tổng thống Ukraine tuyên bố sẽ 'trả đũa', Nga nói không tấn công dân thường Kiev",
+      "summary": "Bộ Ngoại giao Nga khẳng định đợt tấn công lớn nhất vào thủ đô Kiev của Ukraine nhắm vào các mục tiêu quân sự. Ukraine tuyên bố sẽ đáp trả.",
+      "url": "https://tuoitre.vn/tong-thong-ukraine-tuyen-bo-se-tra-dua-nga-noi-khong-tan-cong-dan-thuong-kiev-100260702224536571.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-02T23:09:00+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "adb263cef5a2",
       "title": "22 trường hợp được miễn thuế thu nhập cá nhân từ 1.7",
       "summary": "Chính phủ vừa ban hành Nghị định số 253/2026 hướng dẫn thi hành luật Thuế thu nhập cá nhân. Đáng chú ý là quy định về việc miễn thuế thu nhập cá nhân khi chuyển nhượng bất động sản.",
@@ -118,6 +388,16 @@
       "source": "Thanh Niên",
       "sourceKey": "thanhnien",
       "publishedAt": "2026-07-02T23:09:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "c9d94d770f35",
+      "title": "Phó thủ tướng: Dự báo thiên tai năm nay rất phức tạp, phải xây dựng kịch bản ứng phó",
+      "summary": "Trước dự báo thiên tai năm nay rất phức tạp, Phó thủ tướng Hồ Quốc Dũng yêu cầu Bộ Nông nghiệp và Môi trường phải xây dựng kịch bản ứng phó.",
+      "url": "https://tuoitre.vn/pho-thu-tuong-du-bao-thien-tai-nam-nay-rat-phuc-tap-phai-xay-dung-kich-ban-ung-pho-100260702222407582.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-02T23:02:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -158,6 +438,16 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T23:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "dd111a94b884",
+      "title": "Hơn 1.300 tác phẩm dự thi sáng tác về hạt gạo Việt",
+      "summary": "Với hơn 1.300 tác phẩm dự thi đến từ đa dạng các loại hình, cuộc vận động sáng tác về hạt gạo Việt đã khép lại với nhiều cảm xúc thăng hoa, tôn vinh niềm tự hào văn minh lúa nước hàng nghìn năm.",
+      "url": "https://tuoitre.vn/hon-1300-tac-pham-du-thi-sang-tac-ve-hat-gao-viet-100260702211109318.htm",
+      "source": "Tuổi Trẻ",
+      "sourceKey": "tuoitre",
+      "publishedAt": "2026-07-02T22:53:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -348,6 +638,26 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T22:28:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "d94548125d6c",
+      "title": "Vụ máy bay đâm vào tòa nhà cao nhất Bắc Kinh: Phi công từng muốn tự tử",
+      "summary": "(Dân trí) - Trung Quốc cung cấp thêm thông tin về vụ việc một máy bay hạng nhẹ đâm vào tòa nhà cao nhất Bắc Kinh khiến phi công thiệt mạng.",
+      "url": "https://dantri.com.vn/the-gioi/vu-may-bay-dam-vao-toa-nha-cao-nhat-bac-kinh-phi-cong-tung-muon-tu-tu-20260702214050472.htm",
+      "source": "Dân Trí",
+      "sourceKey": "dantri",
+      "publishedAt": "2026-07-02T22:26:26+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "5ea20ce49ff0",
+      "title": "Người đàn ông nghi bị bắn 5 phát súng vào đầu khi ngồi quán nước ở Đắk Lắk",
+      "summary": "(Dân trí) - Một người đàn ông ngồi ở quán nước tại Đắk Lắk, bất ngờ bị đối tượng đi xe máy dùng vật nghi là súng bắn liên tiếp 5 phát vào vùng đầu khiến nạn nhân tử vong tại chỗ.",
+      "url": "https://dantri.com.vn/phap-luat/nguoi-dan-ong-nghi-bi-ban-5-phat-sung-vao-dau-khi-ngoi-quan-nuoc-o-dak-lak-20260702220756039.htm",
+      "source": "Dân Trí",
+      "sourceKey": "dantri",
+      "publishedAt": "2026-07-02T22:24:19+07:00",
       "category": "Tin tức"
     },
     {
@@ -693,7 +1003,7 @@
     {
       "id": "55929a6f1689",
       "title": "Bão số 1 có thể hình thành trong 24 giờ tới",
-      "summary": "Dự báo từ đêm mai 3-7, do ảnh hưởng của áp thấp nhiệt đới (sau có thể là bão số 1), từ đêm mai đến 5-7, ở Đông Bắc Bộ và Thanh Hóa có khả năng xảy ra một đợt mưa lớn diện rộng, có nơi mưa trên 350mm.",
+      "summary": "Dự báo từ đêm mai 3-7 đến ngày 5-7, do ảnh hưởng của áp thấp nhiệt đới (sau có thể là bão số 1), ở Đông Bắc Bộ và Thanh Hóa có khả năng xảy ra một đợt mưa lớn diện rộng, có nơi mưa trên 350mm.",
       "url": "https://tuoitre.vn/bao-so-1-co-the-hinh-thanh-trong-24-gio-toi-100260702152239029.htm",
       "source": "Tuổi Trẻ",
       "sourceKey": "tuoitre",
@@ -1591,26 +1901,6 @@
       "category": "Tin tức"
     },
     {
-      "id": "c5e6e68c65ea",
-      "title": "Điểm danh 3 cổ phiếu được khuyến nghị tích cực ngay trước phiên giao dịch 3/7",
-      "summary": "Các công ty chứng khoán khuyến nghị tích cực cổ phiếu BMP, HPG và HVN trước phiên giao dịch 3/7, dựa trên triển vọng tăng trưởng lợi nhuận và các yếu tố hỗ trợ từ ngành.",
-      "url": "https://24hmoney.vn/news/diem-danh-3-co-phieu-duoc-khuyen-nghi-tich-cuc-ngay-truoc-phien-giao-dich-3-7-c1a2801868.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T20:21:24.756421+07:00",
-      "category": "Chứng khoán"
-    },
-    {
-      "id": "e5c86a90d492",
-      "title": "Sự thay đổi đáng chú ý của giới siêu giàu trong \"cuộc đại chuyển giao tài sản\"",
-      "summary": "Ngày càng nhiều người có khối tài sản lớn và rất lớn tạo lập những bộ sưu tập tư nhân quy mô trên khắp thế giới, trong những lĩnh vực như tác phẩm nghệ thuật, xe hơi, gốm sứ và kỷ vật.",
-      "url": "https://kenh14.vn/su-thay-doi-dang-chu-y-cua-gioi-sieu-giau-trong-cuoc-dai-chuyen-giao-tai-san-215260702162121195.chn",
-      "source": "Kenh14",
-      "sourceKey": "kenh14",
-      "publishedAt": "2026-07-02T20:21:00+07:00",
-      "category": "Tin tức"
-    },
-    {
       "id": "61dc4d3c2cf3",
       "title": "“Có chí thì nên” - Khi cánh cửa đại học luôn rộng mở với những người không bỏ cuộc",
       "summary": "(Dân trí) - Trong guồng quay hối hả của kỷ nguyên số, khi tấm bằng đại học không là cánh cửa duy nhất nhưng vẫn là nền tảng để lập thân, nhiều bạn trẻ vẫn loay hoay trước câu hỏi: “Làm sao để thay đổi tương lai khi xuất phát điểm không bằng người khác?”.",
@@ -1628,26 +1918,6 @@
       "source": "Dân Trí",
       "sourceKey": "dantri",
       "publishedAt": "2026-07-02T20:20:10+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "c3c7fb1c1d6e",
-      "title": "Vụ người chơi dù lượn tử vong ở Sơn Trà: Phi công quên cài đai hai đùi cho khách",
-      "summary": "Trước khi bay cùng anh T., phi công chỉ gài đai ngực và quên không gài hai đai đùi cho anh T. nên sau khi cất cánh vài phút, anh T. bị tuột khỏi đai ngồi và rơi tự do xuống núi Sơn Trà dẫn đến tử vong.",
-      "url": "https://kenh14.vn/vu-nguoi-choi-du-luon-tu-vong-o-son-tra-phi-cong-quen-cai-dai-hai-dui-cho-khach-215260702194840444.chn",
-      "source": "Kenh14",
-      "sourceKey": "kenh14",
-      "publishedAt": "2026-07-02T20:20:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "0e7c2c59cab0",
-      "title": "Chi 3,9 tỷ đồng để yên tâm sống một mình khi về già, cô gái tiết lộ nơi đáng giá nhất vỏn vẹn 30m²",
-      "summary": "Dù được bày trí khá đơn giản nhưng căn hộ là niềm mơ ước của nhiều người.",
-      "url": "https://kenh14.vn/chi-39-ty-dong-de-yen-tam-song-mot-minh-khi-ve-gia-co-gai-tiet-lo-noi-dang-gia-nhat-von-ven-30m-215260207152108645.chn",
-      "source": "Kenh14",
-      "sourceKey": "kenh14",
-      "publishedAt": "2026-07-02T20:20:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -1738,276 +2008,6 @@
       "source": "Dân Trí",
       "sourceKey": "dantri",
       "publishedAt": "2026-07-02T20:08:12+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "3857c25cbd77",
-      "title": "Tăng Thanh Hà tái xuất sau 13 năm, nói về màn kết hợp nam chính kém 11 tuổi",
-      "summary": "(Dân trí) - Sau 13 năm vắng bóng màn ảnh, diễn viên Tăng Thanh Hà chính thức trở lại với dự án điện ảnh \"Hoàng hậu cuối cùng\".",
-      "url": "https://dantri.com.vn/giai-tri/tang-thanh-ha-tai-xuat-sau-13-nam-noi-ve-man-ket-hop-nam-chinh-kem-11-tuoi-20260702190435980.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T20:07:40+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "b1277b56a5c7",
-      "title": "Vụ án ACV: Bộ Công an đã khởi tố ông Vũ Thế Phiệt và 30 bị can",
-      "summary": "Bộ Công an đã khởi tố 31 người, gồm ông Vũ Thế Phiệt, trong vụ án tại Tổng công ty Cảng Hàng không Việt Nam ACV, về tội vi phạm quy định đấu thầu gây hậu quả nghiêm trọng.",
-      "url": "https://24hmoney.vn/news/vu-an-acv-bo-cong-an-da-khoi-to-ong-vu-the-phiet-va-30-bi-can-c26a2801875.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T20:02:48+07:00",
-      "category": "Pháp luật"
-    },
-    {
-      "id": "fe1cfcfa3c19",
-      "title": "Nước nào có kim tự tháp lớn nhất thế giới?",
-      "summary": "Cao 66 m, phần đế rộng gần 16 ha, kim tự tháp này được Guinness công nhận là lớn nhất thế giới. Nó nằm ở nước nào?",
-      "url": "https://vnexpress.net/nuoc-nao-co-kim-tu-thap-lon-nhat-the-gioi-5092769.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T20:02:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "50e5572fbc03",
-      "title": "Úc tiếp tục tăng phí visa với du học sinh, Việt Nam ở mức nào?",
-      "summary": "Từ ngày 1.7, Úc tăng lệ phí với hầu hết các dòng visa, riêng du học sinh Việt Nam và một số nước được hưởng biểu phí visa du học (500) thấp hơn toàn cầu.",
-      "url": "https://thanhnien.vn/uc-tiep-tuc-tang-phi-visa-voi-du-hoc-sinh-viet-nam-o-muc-nao-185260702192714434.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T20:02:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "4c8131b990cd",
-      "title": "Hai người đăng tin sai sự thật, xuyên tạc về lực lượng công an",
-      "summary": "(Dân trí) - Hai người ở Hưng Yên bị xử lý sau khi sử dụng Facebook bình luận, đăng tải nội dung sai sự thật, xuyên tạc, ảnh hưởng đến hình ảnh lực lượng Công an nhân dân.",
-      "url": "https://dantri.com.vn/phap-luat/hai-nguoi-dang-tin-sai-su-that-xuyen-tac-ve-luc-luong-cong-an-20260702175604706.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T20:02:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "d0167d483e33",
-      "title": "CEO Star Homes cầm đầu đường dây lừa 40 tỷ đồng 'chạy suất' nhà ở xã hội",
-      "summary": "Lê Trung Tiến, CEO Công ty CP Bất động sản Star Homes, bị cáo buộc cầm đầu đường dây lừa đảo 40 tỷ đồng liên quan đến mua bán nhà ở xã hội và hối lộ để làm nhanh giấy tờ.",
-      "url": "https://24hmoney.vn/news/ceo-star-homes-cam-dau-duong-day-lua-40-ty-dong-chay-suat-nha-o-xa-hoi-c26a2801874.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T20:01:02+07:00",
-      "category": "Pháp luật"
-    },
-    {
-      "id": "4b43f4e623a5",
-      "title": "Xem nhanh 20h ngày 2.7: Lý do Messi bỏ xa Ronaldo ở World Cup | FIFA gây tranh cãi vì thiên vị Messi?",
-      "summary": "‘Xem nhanh 20h’ ngày 2.7 có nhiều tin tức đáng chú ý về: Cùng một lỗi nhưng Messi được bỏ qua, Balogun nhận thẻ đỏ: FIFA gây tranh cãi ở World Cup 2026; Messi có cả hệ thống, Ronaldo vẫn loay hoay một mình;...",
-      "url": "https://thanhnien.vn/xem-nhanh-20h-ngay-27-ly-do-messi-bo-xa-ronaldo-o-world-cup-fifa-gay-tranh-cai-vi-thien-vi-messi-185260702192026165.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T20:00:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "d84d2d055ef6",
-      "title": "Shinhan Finance 7 năm sát cánh cùng thị trường Việt, kiến tạo giá trị bền vững",
-      "summary": "Nhân dịp kỷ niệm 7 năm thương hiệu tại Việt Nam, Shinhan Finance tiếp tục khẳng định vị thế của một cộng sự tài chính tin cậy thông qua việc phát triển các giải pháp tài chính thiết thực, mở rộng trải nghiệm số, thúc đẩy tài chính xanh và duy trì các hoạt động vì cộng đồng",
-      "url": "https://thanhnien.vn/shinhan-finance-7-nam-sat-canh-cung-thi-truong-viet-kien-tao-gia-tri-ben-vung-185260702191113412.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T20:00:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "b33af2033db7",
-      "title": "Tiếp tục trở lại thất bại, sự nghiệp của Katy Perry đã 'chạm đáy'?",
-      "summary": "Đĩa đơn mới 'Watch It Burn' của Katy Perry không lọt vào Top 200 Spotify tại cả thị trường Mỹ lẫn toàn cầu, làm dấy lên nhiều tranh luận về việc liệu nữ ca sĩ đã đánh mất sức hút sau chuỗi dự án âm nhạc liên tiếp gây thất vọng?",
-      "url": "https://thanhnien.vn/tiep-tuc-tro-lai-that-bai-su-nghiep-cua-katy-perry-da-cham-day-185260702162826123.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T20:00:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "0cebd9f462dd",
-      "title": "Lên tàu hỏa chơi rồi ngủ quên, cậu bé Trung Quốc thất lạc gia đình 35 năm",
-      "summary": "(Dân trí) - Thời thơ ấu, một cậu bé khiếm thính ở Trung Quốc đã lên tàu hỏa chơi rồi lưu lạc. Sau 35 năm không ngừng tìm kiếm, cậu bé năm nào cũng được đoàn tụ với gia đình nhờ một chi tiết đặc biệt.",
-      "url": "https://dantri.com.vn/doi-song/len-tau-hoa-choi-roi-ngu-quen-cau-be-trung-quoc-that-lac-gia-dinh-35-nam-20260702193246130.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T19:59:44+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "e07bd8cfa483",
-      "title": "Kinh tế TP HCM tăng trưởng 8,55% nửa đầu năm",
-      "summary": "GRDP TP HCM nửa đầu năm 2026 tăng 8,55% nhờ tiêu dùng, công nghiệp, du lịch, và FDI. Tuy nhiên, áp lực từ tăng giá năng lượng ảnh hưởng đến tăng trưởng.",
-      "url": "https://24hmoney.vn/news/kinh-te-tp-hcm-tang-truong-8-55-nua-dau-nam-c27a2801873.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T19:58:41+07:00",
-      "category": "KT vĩ mô"
-    },
-    {
-      "id": "7f74a95696ab",
-      "title": "Bảo vệ thiếu nữ 15 tuổi rối loạn tâm thần bị xâm hại tình dục mang thai",
-      "summary": "Một thiếu nữ 15 tuổi ở Gia Lai mắc rối loạn tâm thần, có hoàn cảnh đặc biệt khó khăn, bị xâm hại tình dục dẫn đến mang thai hơn 17 tuần.",
-      "url": "https://tuoitre.vn/bao-ve-thieu-nu-15-tuoi-roi-loan-tam-than-bi-xam-hai-tinh-duc-mang-thai-100260702182740464.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T19:57:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "d471f31453d9",
-      "title": "The Odyssey của Christopher Nolan là bom tấn được mong chờ nhất năm 2026",
-      "summary": "Chưa ra rạp, The Odyssey của Christopher Nolan đã trở thành một trong những bộ phim được mong chờ nhất năm 2026 với cơn sốt vé IMAX, chiếc xô bắp gây tranh cãi và dàn sao hạng A.",
-      "url": "https://tuoitre.vn/the-odyssey-cua-christopher-nolan-la-bom-tan-duoc-mong-cho-nhat-nam-2026-100260702175754225.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T19:54:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "2e5ab7408260",
-      "title": "Thuế cảnh báo chuyện chia nhỏ mức chi dưới 5 triệu để 'né' chuyển khoản",
-      "summary": "Nếu doanh nghiệp cố ý chia nhỏ số lần chi trả nhằm 'né' quy định thanh toán không dùng tiền mặt thì cơ quan thuế có quyền xác định lại nghĩa vụ thuế căn cứ vào bản chất giao dịch thực tế.",
-      "url": "https://thanhnien.vn/thue-canh-bao-chuyen-chia-nho-muc-chi-duoi-5-trieu-de-ne-chuyen-khoan-18526070219325749.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T19:54:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "0a334552d07c",
-      "title": "Bị phạt 21 roi vì video hôn nhau trên TikTok",
-      "summary": "Giới chức tỉnh Aceh phạt cặp nam nữ chưa kết hôn 21 roi mỗi người sau khi phát hiện video họ hôn nhau trên TikTok.",
-      "url": "https://vnexpress.net/bi-phat-21-roi-vi-video-hon-nhau-tren-tiktok-5092773.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T19:52:26+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "23cf1e05308a",
-      "title": "Tăng Thanh Hà tái xuất showbiz, nói gì khi đóng cặp với đàn em kém 11 tuổi?",
-      "summary": "Trở lại điện ảnh sau 13 năm vắng bóng, Tăng Thanh Hà gây tò mò khi kết hợp cùng với Ma Ran Đô - nam diễn viên kém cô 11 tuổi.",
-      "url": "https://thanhnien.vn/tang-thanh-ha-tai-xuat-showbiz-noi-gi-khi-dong-cap-voi-dan-em-kem-11-tuoi-185260702194210798.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T19:50:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "2eae3b5eccc9",
-      "title": "Tân Á Đại Thành đề xuất 3 khu đô thị 47.000 tỷ đồng tại Hà Nội",
-      "summary": "Công ty Bất động sản Tân Á Đại Thành - Meyland đề xuất 3 dự án quy mô 764 ha, tổng vốn khoảng 47.000 tỷ đồng ở Hà Nội.",
-      "url": "https://vnexpress.net/tan-a-dai-thanh-de-xuat-3-khu-do-thi-47-000-ty-dong-tai-ha-noi-5092591.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T19:48:27+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "7a70075ab35c",
-      "title": "Xác minh 'dấu hiệu đồng phạm' với những KOLs quảng cáo sàn tiền số ONUS",
-      "summary": "Công an điều tra dấu hiệu đồng phạm của KOLs quảng cáo sàn ONUS, liên quan đến vụ án chiếm đoạt tài sản hàng chục nghìn tỷ đồng từ nhà đầu tư với khoảng 5 triệu tài khoản mở tại đây.",
-      "url": "https://24hmoney.vn/news/xac-minh-dau-hieu-dong-pham-voi-nhung-kols-quang-cao-san-tien-so-onus-c26a2801872.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T19:46:59+07:00",
-      "category": "Pháp luật"
-    },
-    {
-      "id": "005ec52a14b4",
-      "title": "Kinh tế TP HCM tăng trưởng 8,55% nửa đầu năm",
-      "summary": "GRDP của TP HCM 6 tháng đầu năm tăng 8,55%, nhờ tiêu dùng tích cực, công nghiệp ổn định, du lịch phục hồi và thu hút FDI tốt.",
-      "url": "https://vnexpress.net/kinh-te-tp-hcm-tang-truong-8-55-nua-dau-nam-5092757.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T19:44:58+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "35a00508c7a0",
-      "title": "Trận Pháp gặp Paraguay vòng 16 đội thời tiết sẽ nóng 38 độ và có cả dông bão",
-      "summary": "Theo tờ Le Parisien, trận đấu giữa Paraguay và Pháp trên sân Philadelphia, Mỹ lúc 4h ngày 5-7 (giờ Việt Nam) sẽ có nhiệt độ lên tới gần 38 độ C và có khả năng xảy ra dông bão.",
-      "url": "https://tuoitre.vn/tran-phap-gap-paraguay-vong-16-doi-thoi-tiet-se-nong-38-do-va-co-ca-dong-bao-10026070219085033.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T19:44:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "38ccb414bbf7",
-      "title": "Phim dùng AI thay Trương Ngọc Ánh: Cục Điện ảnh nói gì về việc cấp phép?",
-      "summary": "(Dân trí) - Phim “Chiếc kén” với phần hình ảnh của diễn viên Trương Ngọc Ánh đã được chỉnh sửa bằng công nghệ AI (trí tuệ nhân tạo), chưa được cấp phép để bán vé rộng rãi.",
-      "url": "https://dantri.com.vn/giai-tri/phim-dung-ai-thay-truong-ngoc-anh-cuc-dien-anh-noi-gi-ve-viec-cap-phep-20260702180649875.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T19:41:12+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "33d064268213",
-      "title": "Doanh nghiệp nhỏ 'mắc kẹt' giữa áp lực chuyển đổi xanh",
-      "summary": "Chi phí đầu tư tăng, thiếu nguồn lực khiến nhiều doanh nghiệp nhỏ và vừa loay hoay trên hành trình chuyển đổi xanh.",
-      "url": "https://tuoitre.vn/doanh-nghiep-nho-mac-ket-giua-ap-luc-chuyen-doi-xanh-100260702180922622.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T19:41:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "09c489343051",
-      "title": "Những thiết bị không nên luôn kết nối internet",
-      "summary": "Thiết bị gia dụng thông minh ngày càng phổ biến nhưng nhiều tính năng internet không thực sự mang lại giá trị cao.",
-      "url": "https://thanhnien.vn/nhung-thiet-bi-khong-nen-luon-ket-noi-internet-185260602001755139.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T19:40:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "d29fbd8a6e3f",
-      "title": "Xuất hiện hình ảnh Messi bật cười gây bão mạng khi được kiểm tra an ninh cực kỳ gắt gao",
-      "summary": "Messi và đội tuyển Argentina đã có mặt tại Miami để chuẩn bị cho trận gặp Cabo Verde tại vòng 32 đội lúc 5 giờ ngày 4.7. Nhưng một đoạn clip lan truyền trên mạng xã hội liên quan đến danh thủ này đang gây bão.",
-      "url": "https://thanhnien.vn/xuat-hien-hinh-anh-messi-bat-cuoi-gay-bao-mang-khi-duoc-kiem-tra-an-ninh-cuc-ky-gat-gao-185260702193700305.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T19:39:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "ba1ac41520bb",
-      "title": "Công bố danh mục 46 hệ thống AI rủi ro cao",
-      "summary": "Robot phẫu thuật, AI xếp hạng người học, hệ thống tự động quyết định cấp tín dụng... nằm trong danh mục hệ thống AI có rủi ro cao theo quy định của Chính phủ.",
-      "url": "https://vnexpress.net/cong-bo-danh-muc-46-he-thong-ai-rui-ro-cao-5092772.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T19:38:17+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "49c1c91a6fee",
-      "title": "​TP HCM sẽ hỗ trợ chuyển đổi số cho 200.000 SME",
-      "summary": "TP HCM đặt mục tiêu hỗ trợ 150.000-200.000 doanh nghiệp nhỏ và vừa chuyển đổi số đến năm 2030, trong đó ít nhất 100.000 đơn vị ứng dụng công nghệ số, AI.",
-      "url": "https://vnexpress.net/tp-hcm-se-ho-tro-chuyen-doi-so-cho-200-000-sme-5092269.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T19:38:13+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "a4984da86beb",
-      "title": "Bộ Công an: Chấm dứt ngay hành vi vi phạm bản quyền để được hưởng khoan hồng",
-      "summary": "Đây là một trong những nội dung được đại diện C03 Bộ Công an chia sẻ tại buổi họp báo thông tin tình hình, kết quả công tác công an 6 tháng đầu năm.",
-      "url": "https://thanhnien.vn/bo-cong-an-cham-dut-ngay-hanh-vi-vi-pham-ban-quyen-de-duoc-huong-khoan-hong-185260702192212077.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T19:37:00+07:00",
       "category": "Tin tức"
     }
   ]
