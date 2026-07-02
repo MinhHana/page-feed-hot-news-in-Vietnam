@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T01:58:18.606770+07:00",
+  "updatedAt": "2026-07-03T03:25:09.205512+07:00",
   "total": 200,
   "sources": [
     "VnExpress",
@@ -10,6 +10,26 @@
     "24HMoney"
   ],
   "articles": [
+    {
+      "id": "03536a085af1",
+      "title": "Argentina - Cabo Verde (5 giờ ngày 4.7, trực tiếp trên VTV): Messi trước cơ hội phá tiếp kỷ lục",
+      "summary": "Trận đội tuyển Argentina gặp tân binh Cabo Verde tại vòng 32 đội sẽ là cơ hội để Messi tiếp tục nâng cao kỷ lục ghi bàn và phá tiếp các kỷ lục tại World Cup.",
+      "url": "https://thanhnien.vn/argentina-cabo-verde-5-gio-ngay-47-truc-tiep-tren-vtv-messi-truoc-co-hoi-pha-tiep-ky-luc-185260702201521329.htm",
+      "source": "Thanh Niên",
+      "sourceKey": "thanhnien",
+      "publishedAt": "2026-07-03T02:45:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "48ab89cabe99",
+      "title": "7 thứ chớ nên đặt bên cạnh giường ngủ",
+      "summary": "Theo quan niệm phong thủy, những gì bạn đặt cạnh giường ngủ cũng có thể ảnh hưởng tới đến cảm giác thư giãn và chất lượng giấc ngủ.",
+      "url": "https://kenh14.vn/7-thu-cho-nen-dat-ben-canh-giuong-ngu-215260702150659703.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-03T02:00:00+07:00",
+      "category": "Tin tức"
+    },
     {
       "id": "6ffe62d35cd2",
       "title": "Điều gì xảy ra với đường huyết khi bạn ăn kem?",
@@ -262,8 +282,8 @@
     },
     {
       "id": "de8188caed14",
-      "title": "Trực tuyến Tây Ban Nha - Áo (2h ngày 3-7): Yamal, Oyarzabal đá chính",
-      "summary": "Ở trận đấu với Áo tại sân vận động SoFi, Tây Ban Nha sẽ ra sân với sơ đồ 4-3-2-1 với Oyarzabal đá cao nhất trên hàng tiền đạo, Yamal cũng sẽ xuất trận. Mời bạn đọc theo dõi diễn biến trên Tuổi Trẻ.",
+      "title": "Tây Ban Nha - Áo (hết hiệp 1) 1-0: Một bàn thắng là quá ít cho Tây Ban Nha",
+      "summary": "Trong 45 phút đầu tiên, Tây Ban Nha đã chơi tốt hơn và tạo ra rất nhiều cơ hội ngon ăn, nhưng họ chỉ có được một bàn thắng do công của Oyarzabal. Mời bạn đọc theo dõi diễn biến trên Tuổi Trẻ.",
       "url": "https://tuoitre.vn/truc-tuyen-tay-ban-nha-ao-2h-ngay-3-7-ve-di-tiep-cho-tay-ban-nha-100260702085557391.htm",
       "source": "Tuổi Trẻ",
       "sourceKey": "tuoitre",
@@ -1851,6 +1871,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "c5e6e68c65ea",
+      "title": "Điểm danh 3 cổ phiếu được khuyến nghị tích cực ngay trước phiên giao dịch 3/7",
+      "summary": "Các công ty chứng khoán khuyến nghị tích cực cổ phiếu BMP, HPG và HVN trước phiên giao dịch 3/7, dựa trên triển vọng tăng trưởng lợi nhuận và các yếu tố hỗ trợ từ ngành.",
+      "url": "https://24hmoney.vn/news/diem-danh-3-co-phieu-duoc-khuyen-nghi-tich-cuc-ngay-truoc-phien-giao-dich-3-7-c1a2801868.html",
+      "source": "24HMoney",
+      "sourceKey": "24hmoney",
+      "publishedAt": "2026-07-02T20:25:09.133622+07:00",
+      "category": "Chứng khoán"
+    },
+    {
       "id": "9da907642ddc",
       "title": "Hé lộ chi tiết mới vụ máy bay đâm vào tòa nhà cao nhất Bắc Kinh",
       "summary": "Giới chức Bắc Kinh ngày 2.7 cho biết phi công lái chiếc máy bay hạng nhẹ đâm vào tòa nhà cao nhất thủ đô Trung Quốc từng mắc chứng lo âu kéo dài và từng viết về việc 'kết thúc cuộc đời' trong nhật ký.",
@@ -1888,16 +1918,6 @@
       "source": "VnExpress",
       "sourceKey": "vnexpress",
       "publishedAt": "2026-07-02T20:22:57+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "f132d03704f4",
-      "title": "Dự báo một khối thi năm nay sẽ có điểm chuẩn GIẢM SÂU từ 1,5 - 3 điểm: Cánh cửa vào ĐH top đầu sẽ rộng mở hơn nhiều!",
-      "summary": "Cánh cửa vào các trường đại học top đầu năm nay của khối thi này đang rộng mở hơn bao giờ hết cho dải điểm từ 24.00 đến 26.00 điểm.",
-      "url": "https://kenh14.vn/du-bao-mot-khoi-thi-nam-nay-se-co-diem-chuan-giam-sau-tu-15-3-diem-canh-cua-vao-dh-top-dau-se-rong-mo-hon-nhieu-215260702155914525.chn",
-      "source": "Kenh14",
-      "sourceKey": "kenh14",
-      "publishedAt": "2026-07-02T20:22:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -1988,26 +2008,6 @@
       "source": "VnExpress",
       "sourceKey": "vnexpress",
       "publishedAt": "2026-07-02T20:09:51+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "f9bf18e1afb5",
-      "title": "47 người bị khởi tố trong vụ án tại Tổng công ty Truyền tải điện Quốc gia",
-      "summary": "Bộ Công an khởi tố 47 người trong vụ án liên quan đến Tổng Công ty Truyền tải điện Quốc gia do vi phạm liên quan dự án đường dây 500kV mạch 3, với nhiều sai phạm trong đấu thầu, kế toán và tham ô tài sản.",
-      "url": "https://24hmoney.vn/news/47-nguoi-bi-khoi-to-trong-vu-an-tai-tong-cong-ty-truyen-tai-dien-quoc-gia-c26a2801879.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T20:09:00+07:00",
-      "category": "Pháp luật"
-    },
-    {
-      "id": "665d0481465e",
-      "title": "Chính phủ quy định 22 trường hợp được miễn thuế thu nhập cá nhân",
-      "summary": "(Dân trí) - Chính phủ quy định miễn thuế thu nhập cá nhân đối với thu nhập từ chuyển nhượng, nhận thừa kế, quà tặng là bất động sản giữa vợ với chồng; cha đẻ, mẹ đẻ với con đẻ...",
-      "url": "https://dantri.com.vn/thoi-su/chinh-phu-quy-dinh-22-truong-hop-duoc-mien-thue-thu-nhap-ca-nhan-20260702194124843.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T20:08:12+07:00",
       "category": "Tin tức"
     }
   ]
