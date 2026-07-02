@@ -124,6 +124,32 @@ body {
 .controls {
   display: grid;
   gap: 0.75rem;
+  position: relative;
+  z-index: 5;
+}
+
+.refresh-btn {
+  justify-self: start;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  color: var(--text);
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.refresh-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
 }
 
 .search-box {
@@ -133,6 +159,8 @@ body {
   padding: 0.65rem 0.85rem;
   border: 1px solid var(--border);
   background: rgba(0, 0, 0, 0.45);
+  position: relative;
+  z-index: 5;
 }
 
 .search-box input {
