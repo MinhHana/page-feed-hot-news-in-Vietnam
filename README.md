@@ -29,7 +29,7 @@ Mở `http://localhost:8080`.
 
 ## Tự động cập nhật
 
-Workflow `.github/workflows/fetch-news.yml` chạy mỗi 30 phút (hoặc thủ công), fetch tin mới và commit `data/news.json`.
+Workflow `.github/workflows/update-site.yml` chạy mỗi 15 phút: fetch tin mới, commit `feed/news.json` và deploy lại GitHub Pages.
 
 ## Cấu trúc
 

@@ -1,5 +1,5 @@
-const DATA_URL = "data/news.json";
-const REFRESH_MS = 5 * 60 * 1000;
+const DATA_URL = "feed/news.json";
+const REFRESH_MS = 2 * 60 * 1000;
 
 const state = {
   articles: [],
@@ -138,7 +138,10 @@ async function loadNews() {
   elements.error.classList.add("hidden");
 
   try {
-    const response = await fetch(`${DATA_URL}?t=${Date.now()}`);
+    const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" },
+    });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -153,7 +156,7 @@ async function loadNews() {
     setStatus(`LIVE · ${payload.total || state.articles.length} tin`, true);
   } catch (error) {
     setStatus("Không tải được dữ liệu", false);
-    elements.error.textContent = `Lỗi: ${error.message}. Hãy chạy scripts/fetch_news.py để tạo data/news.json.`;
+    elements.error.textContent = `Lỗi: ${error.message}. Hãy chạy scripts/fetch_news.py để tạo feed/news.json.`;
     elements.error.classList.remove("hidden");
   }
 }

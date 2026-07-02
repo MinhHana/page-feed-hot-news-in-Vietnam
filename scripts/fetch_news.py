@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 from dateutil import parser as date_parser
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUT = ROOT / "data" / "news.json"
+OUTPUT = ROOT / "feed" / "news.json"
 MAX_ARTICLES = 200
 REQUEST_TIMEOUT = 25
 USER_AGENT = (
