@@ -1,0 +1,31 @@
+name: Fetch News
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch and merge news
+        run: python scripts/fetch_news.py
+
+      - name: Commit updated news data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: cập nhật tin tức tự động"
+          file_pattern: data/news.json
