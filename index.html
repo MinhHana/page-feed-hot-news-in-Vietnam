@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vietnam News Matrix Feed</title>
+  <meta name="description" content="Tổng hợp tin tức mới nhất từ các báo Việt Nam và 24HMoney">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/matrix.css">
+</head>
+<body>
+  <canvas id="matrix-rain" aria-hidden="true"></canvas>
+
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main class="app">
+    <header class="header">
+      <div class="header-top">
+        <h1 class="title">
+          <span class="prompt">&gt;</span>
+          <span class="title-text">VIETNAM NEWS MATRIX FEED</span>
+          <span class="cursor" aria-hidden="true">_</span>
+        </h1>
+        <div class="status">
+          <span id="status-dot" class="status-dot"></span>
+          <span id="status-text">Đang tải dữ liệu...</span>
+        </div>
+      </div>
+      <p class="subtitle">Tổng hợp tin mới nhất từ VnExpress, Tuổi Trẻ, Thanh Niên, Dân Trí, Kenh14 và 24HMoney</p>
+      <div class="controls">
+        <label class="search-box">
+          <span class="prompt">&gt;</span>
+          <input id="search-input" type="search" placeholder="Tìm kiếm tiêu đề hoặc nguồn..." autocomplete="off">
+        </label>
+        <div id="source-filters" class="source-filters" role="group" aria-label="Lọc theo nguồn"></div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="panel-header">
+        <span id="article-count">0 bài viết</span>
+        <span id="updated-at">Cập nhật: --</span>
+      </div>
+      <ul id="news-list" class="news-list" aria-live="polite"></ul>
+      <div id="empty-state" class="empty-state hidden">Không tìm thấy tin phù hợp.</div>
+      <div id="error-state" class="error-state hidden"></div>
+    </section>
+
+    <footer class="footer">
+      <p>Demo GitHub Pages · Dữ liệu cập nhật tự động qua GitHub Actions · Nhấn tiêu đề để mở bài gốc</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/matrix-rain.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
