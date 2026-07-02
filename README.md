@@ -29,7 +29,7 @@ Mở `http://localhost:8080`.
 
 ## Tự động cập nhật
 
-Workflow `.github/workflows/site.yml` chạy mỗi 15 phút và mỗi khi push lên `main`: fetch tin, commit `feed/news.json`, deploy GitHub Pages. Trang web đọc dữ liệu trực tiếp từ `raw.githubusercontent.com` để tránh cache CDN.
+Workflow `.github/workflows/site.yml` chạy mỗi 15 phút và mỗi khi push lên `main`: fetch tin, commit `feed/news.json`, deploy GitHub Pages. Trang web đọc dữ liệu từ jsDelivr CDN (cập nhật theo commit trên `main`).
 
 ## Cấu trúc
 
