@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T18:41:08.765609+07:00",
+  "updatedAt": "2026-07-02T18:43:52.086709+07:00",
   "total": 200,
   "sources": [
     "VnExpress",
@@ -11,6 +11,16 @@
   ],
   "articles": [
     {
+      "id": "b98aeb2198ac",
+      "title": "Bão Ba Vì vừa xuất hiện: Có thể trở thành siêu bão trong tuần này, đạt sức gió tới 260 km/h",
+      "summary": "Hiện cơn bão đang sở hữu sức gió duy trì mạnh nhất lên tới 64,8 km/h ở vùng gần tâm bão, với gió giật đạt 90 km/h.",
+      "url": "https://kenh14.vn/bao-ba-vi-vua-xuat-hien-co-the-tro-thanh-sieu-bao-trong-tuan-nay-dat-suc-gio-toi-260-km-h-215260702175525215.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-02T18:40:00+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "d59e534bd482",
       "title": "Trốn 12,5 tỷ đồng tiền thuế nhưng không bị phạt tù?",
       "summary": "Nguyễn Thị Thu Hường trốn 12,5 tỷ đồng tiền thuế từ kinh doanh online nhưng không bị phạt tù. Tòa áp dụng phạt tiền đối với bà Hường và hai đồng phạm, đồng thời đánh dấu sự chuyển biến trong quản lý thuế cho thương mại điện tử.",
@@ -21,6 +31,36 @@
       "category": "Pháp luật"
     },
     {
+      "id": "a1a2ce8f3db4",
+      "title": "Triệu phú tiền điện tử bị con nợ sát hại, vứt xác trong valy",
+      "summary": "Doanh nhân Fernando Perez Algaba bị nhóm con nợ giăng bẫy, dụ đến điểm hẹn rồi bắn chết, phi tang xác dưới suối vì món nợ hơn 50.000 USD.",
+      "url": "https://vnexpress.net/trieu-phu-tien-dien-tu-bi-con-no-sat-hai-vut-xac-trong-valy-5092755.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:32:32+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "5736543705be",
+      "title": "Hơn 70.000 người hành hương dự lễ tuyên Chân phước linh mục Trương Bửu Diệp",
+      "summary": "Lễ tuyên phong Chân phước diễn ra sáng 2/7 tại nhà thờ Tắc Sậy, thu hút đông giáo dân, tu sĩ và khách hành hương tham dự.",
+      "url": "https://vnexpress.net/hon-70-000-nguoi-hanh-huong-du-le-tuyen-chan-phuoc-linh-muc-truong-buu-diep-5092711.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:31:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "35ebdfabf9c3",
+      "title": "Cơn khát của Ronaldo ở vòng knock-out World Cup",
+      "summary": "Cristiano Ronaldo ghi bàn ở 6 kỳ World Cup liên tiếp và sở hữu hàng loạt kỷ lục của bóng đá thế giới, nhưng chưa từng ghi bàn hay kiến tạo trong một trận đấu thuộc vòng loại trực tiếp.",
+      "url": "https://vnexpress.net/con-khat-cua-ronaldo-o-vong-knock-out-world-cup-5092675.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:31:00+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "1bea5b60348e",
       "title": "Không thể tin nổi \"tướng quân kem nền\" Trương Lăng Hách lại bất ổn đến mức này",
       "summary": "Trương Lăng Hách không ổn rồi!",
@@ -28,6 +68,16 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T18:31:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "42a25c55f46f",
+      "title": "Srna: 'Modric không cần chạy như 20 tuổi vì thấy tất cả trước người khác'",
+      "summary": "Cựu đội trưởng tuyển Croatia Darijo Srna cho rằng Luka Modric vẫn tạo khác biệt ở tuổi 40 nhờ nhãn quan chiến thuật vượt trội, đồng thời tin Croatia đủ sức gây khó khăn cho Bồ Đào Nha ở vòng 1/16 World Cup.",
+      "url": "https://vnexpress.net/srna-modric-khong-can-chay-nhu-20-tuoi-vi-thay-tat-ca-truoc-nguoi-khac-5092708.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:30:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -48,6 +98,26 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T18:30:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "14d44fa587d0",
+      "title": "Quỹ đầu tư về khí hậu 50 triệu USD hướng đến Việt Nam",
+      "summary": "Ngân hàng lớn nhất Đức Deutsche Bank cùng Mekong Capital lập quỹ đầu tư khí hậu trị giá 50 triệu USD hướng đến nông nghiệp của Việt Nam và Lào.",
+      "url": "https://vnexpress.net/quy-dau-tu-ve-khi-hau-50-trieu-usd-huong-den-viet-nam-5092737.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:28:54+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "135a1c7c3115",
+      "title": "47 người bị khởi tố trong vụ án tại Tổng công ty Truyền tải điện Quốc gia",
+      "summary": "Điều tra vụ án tại Tổng Công ty Truyền tải điện Quốc gia, Bộ Công an đã khởi tố 47 người với cáo buộc có sai phạm liên quan dự án đường dây 500kV mạch 3.",
+      "url": "https://vnexpress.net/47-nguoi-bi-khoi-to-trong-vu-an-tai-tong-cong-ty-truyen-tai-dien-quoc-gia-5092437.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:25:31+07:00",
       "category": "Tin tức"
     },
     {
@@ -78,6 +148,16 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T18:21:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "f70e57670bbf",
+      "title": "10 thương hiệu giá trị nhất Việt Nam",
+      "summary": "Top 10 thương hiệu giá trị nhất Việt Nam năm nay có tổng trị giá 24,5 tỷ USD, tiếp tục dẫn đầu bởi Viettel, Vinamilk và Vietcombank, theo Brand Finance.",
+      "url": "https://vnexpress.net/10-thuong-hieu-gia-tri-nhat-viet-nam-5092673.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:20:55+07:00",
       "category": "Tin tức"
     },
     {
@@ -208,6 +288,16 @@
       "source": "VnExpress",
       "sourceKey": "vnexpress",
       "publishedAt": "2026-07-02T18:00:35+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "ba5a139164b4",
+      "title": "Lỡ yêu cô gái vẫn gọi mình là 'chú', có nên mạnh dạn theo đuổi",
+      "summary": "Với cơ hội gần như không thể nhưng em lại là người tôi thật sự muốn gắn bó nhất, có nên thử một cách chậm rãi và tôn trọng.",
+      "url": "https://vnexpress.net/lo-yeu-co-gai-van-goi-minh-la-chu-co-nen-manh-dan-theo-duoi-5092645.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:00:00+07:00",
       "category": "Tin tức"
     },
     {
@@ -1091,6 +1181,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "397b6295b700",
+      "title": "Đèo Cả (HHV) ước doanh thu gần 1.900 tỷ đồng, lợi nhuận vượt 382 tỷ đồng",
+      "summary": "Công ty CP Đầu tư hạ tầng giao thông Đèo Cả (HHV) ước doanh thu 1.874 tỷ đồng, lợi nhuận 382 tỷ đồng trong nửa đầu năm 2026, nhờ vào ba lĩnh vực kinh doanh cốt lõi và mở rộng quy mô hoạt động.",
+      "url": "https://24hmoney.vn/news/deo-ca-hhv-uoc-doanh-thu-gan-1-900-ty-dong-loi-nhuan-vuot-382-ty-dong-c1a2801785.html",
+      "source": "24HMoney",
+      "sourceKey": "24hmoney",
+      "publishedAt": "2026-07-02T16:43:51.994111+07:00",
+      "category": "Chứng khoán"
+    },
+    {
       "id": "0bc9d34806dd",
       "title": "Bé trai lao xe vào đoàn hành hương, 8 nhà sư thiệt mạng",
       "summary": "Bé trai 11 tuổi lái xe bán tải của bố mẹ lao vào đoàn hành hương Phật giáo, khiến 8 nhà sư thiệt mạng, hơn 20 người bị thương.",
@@ -1129,16 +1229,6 @@
       "sourceKey": "thanhnien",
       "publishedAt": "2026-07-02T16:42:00+07:00",
       "category": "Tin tức"
-    },
-    {
-      "id": "397b6295b700",
-      "title": "Đèo Cả (HHV) ước doanh thu gần 1.900 tỷ đồng, lợi nhuận vượt 382 tỷ đồng",
-      "summary": "Công ty CP Đầu tư hạ tầng giao thông Đèo Cả (HHV) ước doanh thu 1.874 tỷ đồng, lợi nhuận 382 tỷ đồng trong nửa đầu năm 2026, nhờ vào ba lĩnh vực kinh doanh cốt lõi và mở rộng quy mô hoạt động.",
-      "url": "https://24hmoney.vn/news/deo-ca-hhv-uoc-doanh-thu-gan-1-900-ty-dong-loi-nhuan-vuot-382-ty-dong-c1a2801785.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T16:41:08.675310+07:00",
-      "category": "Chứng khoán"
     },
     {
       "id": "37d8dfa1cb33",
@@ -1781,16 +1871,6 @@
       "category": "Tin tức"
     },
     {
-      "id": "3ca6b4e19c03",
-      "title": "Cậu bạn thân liên tục gọi bạn gái tôi ra ngồi nhậu cùng",
-      "summary": "Tôi hỏi cô ấy những lần đi chơi riêng, cậu ta có hành động và cử chỉ đụng chạm, thân thiết không; cô ấy xác nhận có vài lần rồi.",
-      "url": "https://vnexpress.net/cau-ban-than-lien-tuc-goi-ban-gai-toi-ra-ngoi-nhau-cung-5092637.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T16:00:00+07:00",
-      "category": "Tin tức"
-    },
-    {
       "id": "65be673c4a3b",
       "title": "Chủ môtô phân khối lớn 'khóc ròng' vì xe còn như mới vẫn bị hủy",
       "summary": "Chiếc Harley-Davidson được chăm sóc cẩn thận, với lớp sơn bóng loáng và tình trạng như mới vẫn sẽ bị tiêu hủy theo thời hạn quy định.",
@@ -1805,6 +1885,16 @@
       "title": "Công nghệ 6G có thể thay đổi cách phủ sóng Internet",
       "summary": "Một nhóm nhà nghiên cứu Trung Quốc phát triển công nghệ sử dụng hệ thống siêu bề mặt để tăng cường tín hiệu giúp phủ sóng đến mọi góc khuất.",
       "url": "https://vnexpress.net/cong-nghe-6g-co-the-thay-doi-cach-phu-song-internet-5091188.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T16:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "3ca6b4e19c03",
+      "title": "Cậu bạn thân liên tục gọi bạn gái tôi ra ngồi nhậu cùng",
+      "summary": "Tôi hỏi cô ấy những lần đi chơi riêng, cậu ta có hành động và cử chỉ đụng chạm, thân thiết không; cô ấy xác nhận có vài lần rồi.",
+      "url": "https://vnexpress.net/cau-ban-than-lien-tuc-goi-ban-gai-toi-ra-ngoi-nhau-cung-5092637.html",
       "source": "VnExpress",
       "sourceKey": "vnexpress",
       "publishedAt": "2026-07-02T16:00:00+07:00",
@@ -1918,96 +2008,6 @@
       "source": "VnExpress",
       "sourceKey": "vnexpress",
       "publishedAt": "2026-07-02T15:56:34+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "94020d4307da",
-      "title": "Giấy phép lái xe quá hạn dưới 30 ngày không phải thi lại lý thuyết",
-      "summary": "(Dân trí) - Theo quy định mới, người có GPLX hết hạn sẽ có thêm gần một tháng để làm thủ tục cấp đổi, thay vì phải thi lại lý thuyết khi lỡ để GPLX quá hạn dù chỉ một ngày như trước đây.",
-      "url": "https://dantri.com.vn/o-to-xe-may/giay-phep-lai-xe-qua-han-duoi-30-ngay-khong-phai-thi-lai-ly-thuyet-20260702154141516.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T15:56:32+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "21ca94d58e91",
-      "title": "Toyota thu hồi xe Land Cruiser Prado và Lexus GX550 vì lỗi phần mềm điều khiển",
-      "summary": "Các xe thuộc diện ảnh hưởng được trang bị đồng hồ táp lô 12.3 inch ở bảng táp lô để hiển thị nhiều thông tin của xe, bao gồm các đèn báo và thông tin cảnh báo khác nhau.",
-      "url": "https://tuoitre.vn/toyota-thu-hoi-xe-land-cruiser-prado-va-lexus-gx550-vi-loi-phan-mem-dieu-khien-10026070215475352.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T15:56:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "7ae0c2c45879",
-      "title": "Sự thật bất ngờ về ảnh ghi khoảnh khắc lịch sử của Ronaldo trong World Cup",
-      "summary": "(Dân trí) - Sau khi thấy tài khoản của ngôi sao Bồ Đào Nha Cristiano Ronaldo đăng bức ảnh do mình chụp và không ghi nguồn, nhiếp ảnh gia người Singapore chủ động liên hệ đòi quyền tác giả.",
-      "url": "https://dantri.com.vn/doi-song/su-that-bat-ngo-ve-anh-ghi-khoanh-khac-lich-su-cua-ronaldo-trong-world-cup-20260702151931971.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T15:55:55+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "62e01ee77eb7",
-      "title": "Giá xăng dầu đồng loạt giảm, có loại giảm hơn 1.000 đồng/lít",
-      "summary": "(Dân trí) - Trong kỳ điều hành ngày 2/7, giá xăng dầu đồng loạt giảm. Trong đó, xăng giảm 790-1.050 đồng/lít.",
-      "url": "https://dantri.com.vn/kinh-doanh/gia-xang-dau-dong-loat-giam-co-loai-giam-hon-1000-donglit-20260702140812000.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T15:55:21+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "0153075cba3b",
-      "title": "Cuộc sống sẽ trọn vẹn hơn nếu có anh",
-      "summary": "Em nghĩ mọi sự cố gắng chờ đợi đều xứng đáng, đúng không anh?",
-      "url": "https://vnexpress.net/cuoc-song-se-tron-ven-hon-neu-co-anh-5092614.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T15:55:17+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "7cff9c7626fb",
-      "title": "Nhận định Thụy Sĩ - Algeria (10h ngày 3/7): Bản lĩnh châu Âu lên tiếng",
-      "summary": "(Dân trí) - Cuộc chạm trán giữa Thụy Sĩ và Algeria tại vòng 1/16 World Cup 2026 được dự báo diễn ra căng thẳng, khi đại diện châu Âu hướng đến tấm vé đi tiếp còn đối thủ quyết tâm tạo nên bất ngờ.",
-      "url": "https://dantri.com.vn/the-thao/nhan-dinh-thuy-si-algeria-10h-ngay-37-ban-linh-chau-au-len-tieng-20260702155454859.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T15:55:04+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "999d33e01315",
-      "title": "Vì sao Tuyên Quang vượt TP.HCM, đứng thứ 2 cả nước điểm trung bình tiếng Anh?",
-      "summary": "Tuyên Quang đứng thứ 2 cả nước, vượt cả TP.HCM, về điểm trung bình môn tiếng Anh trong kỳ thi tốt nghiệp, nhưng thực tế theo số liệu của Bộ Giáo dục và Đào tạo, điểm học bạ lớp 12 môn tiếng Anh của tỉnh Tuyên Quang ở vị trí cuối cùng của cả nước. Kết quả này nói lên điều gì?",
-      "url": "https://tuoitre.vn/vi-sao-tuyen-quang-vuot-tphcm-dung-thu-2-ca-nuoc-diem-trung-binh-tieng-anh-10026070210043085.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T15:55:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "dde99b28e68e",
-      "title": "Hai 'ác nữ' khiến khán giả bức xúc trong 'Nợ đời vay trả'",
-      "summary": "'Nợ đời vay trả' tiếp tục tạo tranh luận không chỉ với chuyện tình 'cưới trước yêu sau' của Vĩnh Trường - Ngọc Trâm, mà còn với hai 'ác nữ' trong phim.",
-      "url": "https://thanhnien.vn/hai-ac-nu-khien-khan-gia-buc-xuc-trong-no-doi-vay-tra-185260702125916017.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T15:55:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "8e3f09c157b0",
-      "title": "Quên gài khóa an toàn khiến du khách rơi khỏi dù lượn, tử vong: Phi công và công ty bồi thường bao nhiêu?",
-      "summary": "Phi công quên gài khóa an toàn ở đùi khiến du khách rơi khỏi dù lượn, tử vong trên bán đảo Sơn Trà (Đà Nẵng), vậy trách nhiệm dân sự bồi thường trong vụ việc này thế nào?",
-      "url": "https://tuoitre.vn/quen-gai-khoa-an-toan-khien-du-khach-roi-khoi-du-luon-tu-vong-phi-cong-va-cong-ty-boi-thuong-bao-nhieu-100260702150149568.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T15:54:00+07:00",
       "category": "Tin tức"
     }
   ]
