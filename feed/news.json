@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T18:39:45.297927+07:00",
+  "updatedAt": "2026-07-02T18:41:08.765609+07:00",
   "total": 200,
   "sources": [
     "VnExpress",
@@ -121,6 +121,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "b9eb546be02e",
+      "title": "Thêm 14 người bị khởi tố trong vụ Z Holding sản xuất hơn 4 triệu hộp sữa giả",
+      "summary": "Khi điều tra giai đoạn 2 vụ án Z holding sản xuất hơn 4,2 triệu lon sữa giả, Bộ Công an đã khởi tố thêm 14 người với cáo buộc gây thiệt về thuế 1.435 tỷ đồng.",
+      "url": "https://vnexpress.net/them-14-nguoi-bi-khoi-to-trong-vu-z-holding-san-xuat-hon-4-trieu-hop-sua-gia-5092625.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:13:35+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "51e0da98d652",
       "title": "Đừng tin \"suất ngoại giao\" nhà ở xã hội",
       "summary": "Cục Cảnh sát kinh tế điều tra vụ lừa đảo liên quan đến 'suất ngoại giao' nhà ở xã hội, với hơn 40 tỷ đồng bị chiếm đoạt. 13 bị can đã bị khởi tố và Bộ Công an khuyến cáo khán giả cẩn trọng khi tiếp cận thông tin.",
@@ -129,6 +139,16 @@
       "sourceKey": "24hmoney",
       "publishedAt": "2026-07-02T18:12:54+07:00",
       "category": "Pháp luật"
+    },
+    {
+      "id": "147ba61f7b1f",
+      "title": "Du khách nên hoãn kế hoạch đi biển, trekking vì mưa bão",
+      "summary": "Cơ quan phòng chống thiên tai khuyến cáo du khách hạn chế đến các điểm du lịch biển, đảo và vùng núi, điều chỉnh lịch trình vào cuối tuần này để tránh rủi ro do mưa lớn.",
+      "url": "https://vnexpress.net/du-khach-nen-hoan-ke-hoach-di-bien-trekking-vi-mua-bao-5092748.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:12:44+07:00",
+      "category": "Tin tức"
     },
     {
       "id": "1313dccc3a68",
@@ -161,6 +181,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "c2e89d32bc20",
+      "title": "31 người bị khởi tố trong đại án tại ACV",
+      "summary": "Ông Vũ Thế Phiệt, Chủ tịch HĐQT Tổng công ty Cảng hàng không Việt Nam (ACV) cùng 30 người vừa bị khởi tố về 4 tội danh.",
+      "url": "https://vnexpress.net/31-nguoi-bi-khoi-to-trong-dai-an-tai-acv-5092417.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:05:18+07:00",
+      "category": "Tin tức"
+    },
+    {
       "id": "6e5c5edae9f2",
       "title": "Hành động giữa sân khấu rõ thái độ Tăng Thanh Hà với nam diễn viên điển trai kém 11 tuổi",
       "summary": "Lần đầu sánh đôi trong dự án điện ảnh Hoàng hậu cuối cùng, Tăng Thanh Hà và Ma Ran Đô nhanh chóng trở thành tâm điểm.",
@@ -168,6 +198,16 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T18:01:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "401884cf478a",
+      "title": "Góc khuất thị trường bẻ xương kéo dài chân ở Trung Quốc",
+      "summary": "Phẫu thuật kéo xương chân bị cấm ở Trung Quốc, nhưng nhiều đường dây ngầm vẫn hoạt động dẫn tới các ca biến chứng đau đớn suốt đời.",
+      "url": "https://vnexpress.net/goc-khuat-thi-truong-be-xuong-keo-dai-chan-o-trung-quoc-5092688.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T18:00:35+07:00",
       "category": "Tin tức"
     },
     {
@@ -1097,7 +1137,7 @@
       "url": "https://24hmoney.vn/news/deo-ca-hhv-uoc-doanh-thu-gan-1-900-ty-dong-loi-nhuan-vuot-382-ty-dong-c1a2801785.html",
       "source": "24HMoney",
       "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T16:39:45.251661+07:00",
+      "publishedAt": "2026-07-02T16:41:08.675310+07:00",
       "category": "Chứng khoán"
     },
     {
@@ -1968,46 +2008,6 @@
       "source": "Tuổi Trẻ",
       "sourceKey": "tuoitre",
       "publishedAt": "2026-07-02T15:54:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "b0c678705f9f",
-      "title": "Thủ tướng đề nghị công an đấu tranh quyết liệt với tội phạm sở hữu trí tuệ",
-      "summary": "(Dân trí) - Thủ tướng Lê Minh Hưng đề nghị lực lượng công an đấu tranh quyết liệt với tội phạm sở hữu trí tuệ, lừa đảo, thao túng thị trường, trục lợi chính sách để bảo vệ môi trường đầu tư, kinh doanh.",
-      "url": "https://dantri.com.vn/thoi-su/thu-tuong-de-nghi-cong-an-dau-tranh-quyet-liet-voi-toi-pham-so-huu-tri-tue-20260702153539819.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T15:54:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "d65f31819baf",
-      "title": "Nhiều lần 'drift' gây náo loạn khu đô thị, tài xế Porsche khai lý do?",
-      "summary": "Cơ quan chức năng xác định hành vi của nam tài xế đã gây mất an ninh, trật tự tại địa phương, tiềm ẩn nguy cơ cao xảy ra tai nạn giao thông, đe dọa trực tiếp đến tính mạng và sức khỏe của người tham gia giao thông cùng những người có mặt tại khu vực.",
-      "url": "https://kenh14.vn/nhieu-lan-drift-gay-nao-loan-khu-do-thi-tai-xe-porsche-khai-ly-do-215260702154653539.chn",
-      "source": "Kenh14",
-      "sourceKey": "kenh14",
-      "publishedAt": "2026-07-02T15:54:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "228ba3baa404",
-      "title": "Bên trong chuyên cơ mới được ví như “cung điện bay” của Tổng thống Trump",
-      "summary": "(Dân trí) - Với nội thất xa xỉ, chuyên cơ Không lực Một mới của Tổng thống Mỹ Donald Trump do Qatar tặng được ví như \"cung điện trên không\".",
-      "url": "https://dantri.com.vn/the-gioi/ben-trong-chuyen-co-moi-duoc-vi-nhu-cung-dien-bay-cua-tong-thong-trump-20260702152436032.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T15:53:43+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "40262a88cdb7",
-      "title": "TAG Heuer giới thiệu không gian thương hiệu mới tại Saigon Centre",
-      "summary": "Không gian boutique mới, nơi tinh thần tiên phong của nghệ thuật chế tác đồng hồ Thụy Sĩ hòa quyện cùng di sản motorsport giàu cảm hứng, mang đến trải nghiệm flagship được nâng tầm.",
-      "url": "https://thanhnien.vn/tag-heuer-gioi-thieu-khong-gian-thuong-hieu-moi-tai-saigon-centre-185260702155812474.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-02T15:53:00+07:00",
       "category": "Tin tức"
     }
   ]
