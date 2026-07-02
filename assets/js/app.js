@@ -1,4 +1,9 @@
-const DATA_URL = "feed/news.json";
+const REPO = "MinhHana/page-feed-hot-news-in-Vietnam";
+const IS_LOCAL =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1";
+const DATA_URL = IS_LOCAL
+  ? "feed/news.json"
+  : `https://raw.githubusercontent.com/${REPO}/main/feed/news.json`;
 const REFRESH_MS = 2 * 60 * 1000;
 
 const state = {
@@ -16,6 +21,7 @@ const elements = {
   statusText: document.getElementById("status-text"),
   filters: document.getElementById("source-filters"),
   search: document.getElementById("search-input"),
+  refreshBtn: document.getElementById("refresh-btn"),
   empty: document.getElementById("empty-state"),
   error: document.getElementById("error-state"),
 };
@@ -41,30 +47,52 @@ function formatUpdatedAt(isoString) {
 }
 
 function escapeHtml(value) {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function normalizeText(value) {
+  return String(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D")
+    .toLowerCase()
+    .trim();
+}
+
+function getSearchTokens(query) {
+  return normalizeText(query).split(/\s+/).filter(Boolean);
+}
+
+function matchesSearch(article, tokens) {
+  if (!tokens.length) return true;
+
+  const haystack = normalizeText(
+    `${article.title} ${article.summary} ${article.source} ${article.category}`
+  );
+
+  return tokens.every((token) => haystack.includes(token));
 }
 
 function getFilteredArticles() {
-  const query = state.query.trim().toLowerCase();
+  const tokens = getSearchTokens(state.query);
 
   return state.articles.filter((article) => {
     const matchesSource =
       state.activeSource === "all" || article.sourceKey === state.activeSource;
 
-    if (!matchesSource) return false;
-    if (!query) return true;
-
-    const haystack = `${article.title} ${article.summary} ${article.source} ${article.category}`.toLowerCase();
-    return haystack.includes(query);
+    return matchesSource && matchesSearch(article, tokens);
   });
 }
 
 function renderFilters() {
+  if (!elements.filters) return;
+
   const buttons = [
     `<button class="filter-btn active" data-source="all" type="button">TẤT CẢ</button>`,
     ...state.sources.map(
@@ -88,8 +116,16 @@ function renderFilters() {
 
 function renderArticles() {
   const filtered = getFilteredArticles();
+  const tokens = getSearchTokens(state.query);
+
   elements.count.textContent = `${filtered.length} bài viết`;
   elements.empty.classList.toggle("hidden", filtered.length > 0);
+
+  if (tokens.length && filtered.length === 0) {
+    elements.empty.textContent = `Không tìm thấy tin cho "${state.query.trim()}".`;
+  } else {
+    elements.empty.textContent = "Không tìm thấy tin phù hợp.";
+  }
 
   elements.list.innerHTML = filtered
     .map((article) => {
@@ -137,6 +173,10 @@ async function loadNews() {
   setStatus("Đang tải dữ liệu...", false);
   elements.error.classList.add("hidden");
 
+  if (elements.refreshBtn) {
+    elements.refreshBtn.disabled = true;
+  }
+
   try {
     const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {
       cache: "no-store",
@@ -156,15 +196,34 @@ async function loadNews() {
     setStatus(`LIVE · ${payload.total || state.articles.length} tin`, true);
   } catch (error) {
     setStatus("Không tải được dữ liệu", false);
-    elements.error.textContent = `Lỗi: ${error.message}. Hãy chạy scripts/fetch_news.py để tạo feed/news.json.`;
+    elements.error.textContent = `Lỗi: ${error.message}. Thử nhấn nút TẢI LẠI hoặc kiểm tra kết nối mạng.`;
     elements.error.classList.remove("hidden");
+  } finally {
+    if (elements.refreshBtn) {
+      elements.refreshBtn.disabled = false;
+    }
   }
 }
 
-elements.search.addEventListener("input", (event) => {
-  state.query = event.target.value;
-  renderArticles();
-});
+if (elements.search) {
+  elements.search.addEventListener("input", (event) => {
+    state.query = event.target.value;
+    renderArticles();
+  });
+
+  elements.search.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      renderArticles();
+    }
+  });
+}
+
+if (elements.refreshBtn) {
+  elements.refreshBtn.addEventListener("click", () => {
+    loadNews();
+  });
+}
 
 loadNews();
 setInterval(loadNews, REFRESH_MS);
