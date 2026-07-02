@@ -3,7 +3,7 @@ const IS_LOCAL =
   location.hostname === "localhost" || location.hostname === "127.0.0.1";
 const DATA_URL = IS_LOCAL
   ? "feed/news.json"
-  : `https://raw.githubusercontent.com/${REPO}/main/feed/news.json`;
+  : `https://cdn.jsdelivr.net/gh/${REPO}@main/feed/news.json`;
 const REFRESH_MS = 2 * 60 * 1000;
 
 const state = {
