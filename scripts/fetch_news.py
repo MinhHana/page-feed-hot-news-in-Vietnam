@@ -224,7 +224,7 @@ def dedupe_articles(articles: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return unique
 
 
-def main() -> None:
+def fetch_all_news() -> dict[str, Any]:
     session = make_session()
     all_articles: list[dict[str, Any]] = []
 
@@ -238,16 +238,20 @@ def main() -> None:
     all_articles.sort(key=sort_key, reverse=True)
     all_articles = all_articles[:MAX_ARTICLES]
 
-    payload = {
+    return {
         "updatedAt": to_iso(datetime.now(VN_TZ)),
         "total": len(all_articles),
         "sources": [source["name"] for source in RSS_SOURCES] + ["24HMoney"],
         "articles": all_articles,
     }
 
+
+def main() -> None:
+    payload = fetch_all_news()
+
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {len(all_articles)} articles to {OUTPUT}")
+    print(f"Wrote {payload['total']} articles to {OUTPUT}")
 
 
 if __name__ == "__main__":
