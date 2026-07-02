@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T20:13:30.514151+07:00",
+  "updatedAt": "2026-07-02T20:22:06.262877+07:00",
   "total": 200,
   "sources": [
     "VnExpress",
@@ -10,6 +10,26 @@
     "24HMoney"
   ],
   "articles": [
+    {
+      "id": "dac929988874",
+      "title": "Dự kiến giảm 30% đầu mối trường công lập",
+      "summary": "Bộ Giáo dục dự kiến giảm ít nhất 30% đầu mối trường công nhưng hình thành các cơ sở giáo dục quy mô lớn, đổi mới quản trị để nâng cao chất lượng.",
+      "url": "https://vnexpress.net/du-kien-giam-30-dau-moi-truong-cong-lap-5092738.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T20:18:35+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "0bb681e59581",
+      "title": "Tương quan trước trận Bồ Đào Nha - Croatia",
+      "summary": "Hai siêu sao 41 tuổi Cristiano Ronaldo và Luka Modric so tài, khi Bồ Đào Nha gặp Croatia tại vòng 1/16 World Cup 2026.",
+      "url": "https://vnexpress.net/tuong-quan-truoc-tran-bo-dao-nha-croatia-5092778.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T20:17:37+07:00",
+      "category": "Tin tức"
+    },
     {
       "id": "4f014c3119c5",
       "title": "Trung Quốc tăng mua, xuất khẩu nông lâm thủy sản đạt gần 36 tỷ USD",
@@ -29,6 +49,26 @@
       "sourceKey": "24hmoney",
       "publishedAt": "2026-07-02T20:10:27+07:00",
       "category": "Tin quốc tế"
+    },
+    {
+      "id": "c176778172e2",
+      "title": "Hình ảnh nam thần lố bịch nhất lịch sử showbiz sau 4 năm bị cấm sóng triệt để",
+      "summary": "Công chúng hồi hộp nín thở chờ đợi xem nam diễn viên đẹp trai nhưng tai tiếng này sẽ tiếp tục bày ra trò gì nữa.",
+      "url": "https://kenh14.vn/hinh-anh-nam-than-lo-bich-nhat-lich-su-showbiz-sau-4-nam-bi-cam-song-triet-de-215260702151554005.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-02T20:10:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "bf6d64031277",
+      "title": "Đức cáo buộc chính quyền Ukraine đứng sau vụ phá hoại đường ống Nord Stream",
+      "summary": "Công tố viên cho rằng giới chức Ukraine đã ra lệnh cho các nghi phạm thực hiện vụ phá hoại đường ống khí đốt Nord Stream hồi năm 2022.",
+      "url": "https://vnexpress.net/duc-cao-buoc-chinh-quyen-ukraine-dung-sau-vu-pha-hoai-duong-ong-nord-stream-5092753.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-02T20:09:51+07:00",
+      "category": "Tin tức"
     },
     {
       "id": "f9bf18e1afb5",
@@ -79,6 +119,16 @@
       "sourceKey": "24hmoney",
       "publishedAt": "2026-07-02T20:01:02+07:00",
       "category": "Pháp luật"
+    },
+    {
+      "id": "722282092d98",
+      "title": "Ninh Dương Lan Ngọc sởn da gà vì Tăng Thanh Hà",
+      "summary": "Đến những ngôi sao lớn như Ninh Dương Lan Ngọc cũng phải cảm thán trước Tăng Thanh Hà.",
+      "url": "https://kenh14.vn/ninh-duong-lan-ngoc-son-da-ga-vi-tang-thanh-ha-215260702182737857.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-02T20:01:00+07:00",
+      "category": "Tin tức"
     },
     {
       "id": "4b43f4e623a5",
@@ -391,16 +441,6 @@
       "category": "Tin tức"
     },
     {
-      "id": "722282092d98",
-      "title": "Ninh Dương Lan Ngọc sởn da gà vì Tăng Thanh Hà",
-      "summary": "Đến những ngôi sao lớn như Ninh Dương Lan Ngọc cũng phải cảm thán trước Tăng Thanh Hà.",
-      "url": "https://kenh14.vn/ninh-duong-lan-ngoc-son-da-ga-vi-tang-thanh-ha-215260702182737857.chn",
-      "source": "Kenh14",
-      "sourceKey": "kenh14",
-      "publishedAt": "2026-07-02T19:35:00+07:00",
-      "category": "Tin tức"
-    },
-    {
       "id": "51c93ccc119c",
       "title": "Đẻ rơi con trên ôtô",
       "summary": "Trên đường đến bệnh viện, sản phụ 24 tuổi bất ngờ chuyển dạ sinh con trong ôtô, bé trai nặng 3,5 kg.",
@@ -621,6 +661,16 @@
       "category": "Tin tức"
     },
     {
+      "id": "316655bdce09",
+      "title": "Tập đoàn C.E.O chi hơn 170 tỷ lập thêm 2 công ty con mảng giáo dục",
+      "summary": "Tập đoàn C.E.O thành lập 2 công ty con trong lĩnh vực giáo dục với tổng vốn 175 tỷ đồng, nhằm triển khai trường tiểu học và mầm non tại Sunny Garden City, hướng tới mục tiêu doanh thu 3,000 tỷ đồng vào năm 2026.",
+      "url": "https://24hmoney.vn/news/tap-doan-c-e-o-chi-hon-170-ty-lap-them-2-cong-ty-con-mang-giao-duc-c2a2801840.html",
+      "source": "24HMoney",
+      "sourceKey": "24hmoney",
+      "publishedAt": "2026-07-02T19:22:06.174255+07:00",
+      "category": "Kinh doanh"
+    },
+    {
       "id": "10835253a86b",
       "title": "Cách Tòa Tối cao Mỹ vẽ lại ranh giới quyền lực của ông Trump",
       "summary": "Tòa án Tối cao Mỹ đã điều chỉnh quyền lực của Tổng thống Trump, bác bỏ kế hoạch xóa bỏ luật cấp quyền công dân theo nơi sinh, đồng thời mở rộng quyền kiểm soát trong các cơ quan hành pháp độc lập.",
@@ -709,16 +759,6 @@
       "sourceKey": "thanhnien",
       "publishedAt": "2026-07-02T19:14:00+07:00",
       "category": "Tin tức"
-    },
-    {
-      "id": "316655bdce09",
-      "title": "Tập đoàn C.E.O chi hơn 170 tỷ lập thêm 2 công ty con mảng giáo dục",
-      "summary": "Tập đoàn C.E.O thành lập 2 công ty con trong lĩnh vực giáo dục với tổng vốn 175 tỷ đồng, nhằm triển khai trường tiểu học và mầm non tại Sunny Garden City, hướng tới mục tiêu doanh thu 3,000 tỷ đồng vào năm 2026.",
-      "url": "https://24hmoney.vn/news/tap-doan-c-e-o-chi-hon-170-ty-lap-them-2-cong-ty-con-mang-giao-duc-c2a2801840.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-02T19:13:30.423206+07:00",
-      "category": "Kinh doanh"
     },
     {
       "id": "0242f3d42d47",
@@ -1061,16 +1101,6 @@
       "category": "Tin tức"
     },
     {
-      "id": "6a1d72860bc9",
-      "title": "Ông Nguyễn Trọng Hiếu được bầu giữ chức Phó Chủ tịch tỉnh Hà Tĩnh",
-      "summary": "(Dân trí) - Với số phiếu tàn thành 100%, Hội đồng nhân dân tỉnh Hà Tĩnh đã bầu ông Nguyễn Trọng Hiếu, Giám đốc Sở Tài chính, giữ chức Phó Chủ tịch UBND tỉnh Hà Tĩnh nhiệm kỳ 2026-2031.",
-      "url": "https://dantri.com.vn/thoi-su/ong-nguyen-trong-hieu-duoc-bau-giu-chuc-pho-chu-tich-tinh-ha-tinh-20260702184817714.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T18:57:08+07:00",
-      "category": "Tin tức"
-    },
-    {
       "id": "a9a3f785845f",
       "title": "Vụ án xảy ra tại ACV: Đã khởi tố 31 bị can",
       "summary": "Trong vụ án xảy ra tại ACV, Cơ quan Cảnh sát điều tra Bộ Công an đã khởi tố 31 bị can ở nhiều nhóm tội, trong đó có ông Vũ Thế Phiệt, cựu Chủ tịch HĐQT ACV.",
@@ -1168,16 +1198,6 @@
       "source": "Kenh14",
       "sourceKey": "kenh14",
       "publishedAt": "2026-07-02T18:50:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "74d259b34f48",
-      "title": "Bộ Công an thu giữ hơn 350kg vàng, bạc trong vụ án sàn tiền số ONUS",
-      "summary": "(Dân trí) - Liên quan vụ án sàn tiền số ONUS, cơ quan điều tra đã thu giữ hơn 350kg vàng, bạc các loại; ngăn chặn giao dịch 8 bất động sản trị giá khoảng 200 tỷ đồng; tạm dừng giao dịch hơn 300 tài khoản.",
-      "url": "https://dantri.com.vn/phap-luat/bo-cong-an-thu-giu-hon-350kg-vang-bac-trong-vu-an-san-tien-so-onus-20260702184218337.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-02T18:48:07+07:00",
       "category": "Tin tức"
     },
     {
@@ -1988,26 +2008,6 @@
       "source": "Dân Trí",
       "sourceKey": "dantri",
       "publishedAt": "2026-07-02T17:41:48+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "7c5d334e748a",
-      "title": "Tháng 6, nhiệt độ đại dương tăng cao kỷ lục khiến các nhà khoa học băn khoăn",
-      "summary": "Các nhà khoa học cảnh báo nhiệt độ đại dương cao kỷ lục sẽ gây tổn thất ngày càng lớn đối với hệ sinh thái biển.",
-      "url": "https://tuoitre.vn/thang-6-nhiet-do-dai-duong-tang-cao-ky-luc-khien-cac-nha-khoa-hoc-ban-khoan-100260702144434134.htm",
-      "source": "Tuổi Trẻ",
-      "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-02T17:41:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "14c0cdab3e36",
-      "title": "Tập đoàn Trần Đức hợp tác IBST nghiên cứu tiêu chuẩn xây dựng gỗ",
-      "summary": "Tập đoàn Trần Đức và IBST thỏa thuận hợp tác nghiên cứu tiêu chuẩn, chuyển giao công nghệ, mở rộng ứng dụng các giải pháp vật liệu xanh trong lĩnh vực xây dựng.",
-      "url": "https://vnexpress.net/tap-doan-tran-duc-hop-tac-ibst-nghien-cuu-tieu-chuan-xay-dung-go-5091631.html",
-      "source": "VnExpress",
-      "sourceKey": "vnexpress",
-      "publishedAt": "2026-07-02T17:40:00+07:00",
       "category": "Tin tức"
     }
   ]
