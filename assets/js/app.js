@@ -1,9 +1,4 @@
 const REPO = "MinhHana/page-feed-hot-news-in-Vietnam";
-const IS_LOCAL =
-  location.hostname === "localhost" || location.hostname === "127.0.0.1";
-const DATA_URL = IS_LOCAL
-  ? "feed/news.json"
-  : `https://cdn.jsdelivr.net/gh/${REPO}@main/feed/news.json`;
 const REFRESH_MS = 2 * 60 * 1000;
 
 const state = {
@@ -25,6 +20,26 @@ const elements = {
   empty: document.getElementById("empty-state"),
   error: document.getElementById("error-state"),
 };
+
+function getFeedUrls() {
+  const pageUrl = new URL(window.location.href);
+
+  if (!pageUrl.pathname.endsWith("/")) {
+    if (/\.[a-z0-9]+$/i.test(pageUrl.pathname)) {
+      pageUrl.pathname = pageUrl.pathname.replace(/\/[^/]*$/, "/");
+    } else {
+      pageUrl.pathname = `${pageUrl.pathname}/`;
+    }
+  }
+
+  const localUrl = new URL("feed/news.json", pageUrl).href;
+
+  return [
+    localUrl,
+    `https://cdn.jsdelivr.net/gh/${REPO}@main/feed/news.json`,
+    `https://raw.githubusercontent.com/${REPO}/main/feed/news.json`,
+  ];
+}
 
 function formatTime(isoString) {
   if (!isoString) return "--:--";
@@ -169,6 +184,30 @@ function buildSourceList(payload) {
   return Array.from(map, ([key, name]) => ({ key, name }));
 }
 
+async function fetchNewsPayload() {
+  const urls = getFeedUrls();
+  const errors = [];
+
+  for (const url of urls) {
+    try {
+      const response = await fetch(`${url}?t=${Date.now()}`, {
+        cache: "no-store",
+        headers: { "Cache-Control": "no-cache" },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      return response.json();
+    } catch (error) {
+      errors.push(`${url}: ${error.message}`);
+    }
+  }
+
+  throw new Error(errors.join(" | "));
+}
+
 async function loadNews() {
   setStatus("Đang tải dữ liệu...", false);
   elements.error.classList.add("hidden");
@@ -178,15 +217,7 @@ async function loadNews() {
   }
 
   try {
-    const response = await fetch(`${DATA_URL}?t=${Date.now()}`, {
-      cache: "no-store",
-      headers: { "Cache-Control": "no-cache" },
-    });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const payload = await response.json();
+    const payload = await fetchNewsPayload();
     state.articles = payload.articles || [];
     state.sources = buildSourceList(payload);
 
@@ -196,8 +227,10 @@ async function loadNews() {
     setStatus(`LIVE · ${payload.total || state.articles.length} tin`, true);
   } catch (error) {
     setStatus("Không tải được dữ liệu", false);
-    elements.error.textContent = `Lỗi: ${error.message}. Thử nhấn nút TẢI LẠI hoặc kiểm tra kết nối mạng.`;
+    elements.error.textContent =
+      "Không tải được dữ liệu tin. Thử nhấn TẢI LẠI TIN hoặc kiểm tra kết nối mạng.";
     elements.error.classList.remove("hidden");
+    console.error("Feed load failed:", error);
   } finally {
     if (elements.refreshBtn) {
       elements.refreshBtn.disabled = false;

@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/matrix.css">
+  <script>
+    (function () {
+      const path = window.location.pathname;
+      if (path && !path.endsWith("/") && !/\.[a-z0-9]+$/i.test(path)) {
+        window.location.replace(`${path}/${window.location.search}${window.location.hash}`);
+      }
+    })();
+  </script>
 </head>
 <body>
   <canvas id="matrix-rain" aria-hidden="true"></canvas>
@@ -54,7 +62,7 @@
     </footer>
   </main>
 
-  <script src="assets/js/matrix-rain.js?v=2"></script>
-  <script src="assets/js/app.js?v=3"></script>
+  <script src="assets/js/matrix-rain.js?v=4"></script>
+  <script src="assets/js/app.js?v=4"></script>
 </body>
 </html>
