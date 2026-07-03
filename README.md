@@ -68,12 +68,20 @@ API:
 ```
 ├── server/main.py          # FastAPI: web + API /api/news
 ├── scripts/fetch_news.py   # Logic thu thập tin
+├── feed/news.json          # Dữ liệu mẫu (chạy local, không cập nhật tự động)
 ├── index.html              # Giao diện Matrix
 ├── assets/                 # CSS, JS
 ├── render.yaml             # Cấu hình Render
 └── requirements.txt
 ```
 
+Tạo `feed/news.json` thủ công khi cần test local:
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/fetch_news.py
+```
+
 ## GitHub Pages (không khuyến nghị)
 
-Vẫn có thể dùng GitHub Pages cho giao diện tĩnh, nhưng dữ liệu tin sẽ không realtime và dễ lỗi trên mobile. Dùng Render để có trải nghiệm đầy đủ.
+Vẫn có thể dùng GitHub Pages cho giao diện tĩnh, nhưng dữ liệu tin sẽ không realtime và dễ lỗi trên mobile. Dùng Render để có trải nghiệm đầy đủ. Không còn workflow tự động commit tin — Render fetch tin trực tiếp qua server.
