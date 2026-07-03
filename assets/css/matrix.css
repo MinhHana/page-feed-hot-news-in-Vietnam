@@ -14,7 +14,7 @@
   --panel-inset: inset 0 0 30px rgba(0, 168, 50, 0.05);
   --scanline-color: rgba(0, 0, 0, 0.05);
   --rain-opacity: 0.14;
-  --font: "Share Tech Mono", "Courier New", monospace;
+  --font: "Courier New", Courier, monospace;
 }
 
 @media (prefers-color-scheme: dark) {

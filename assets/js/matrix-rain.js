@@ -41,7 +41,7 @@
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = colors.char;
-    ctx.font = `${fontSize}px Share Tech Mono, monospace`;
+    ctx.font = `${fontSize}px "Courier New", Courier, monospace`;
 
     for (let i = 0; i < drops.length; i += 1) {
       const char = chars[Math.floor(Math.random() * chars.length)];
