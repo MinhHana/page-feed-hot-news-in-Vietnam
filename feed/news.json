@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T12:33:02.670086+07:00",
+  "updatedAt": "2026-07-03T12:38:13.012658+07:00",
   "total": 200,
   "sources": [
     "VnExpress",
@@ -10,6 +10,26 @@
     "24HMoney"
   ],
   "articles": [
+    {
+      "id": "dc9e56b7054e",
+      "title": "Đoàn cứu hộ Việt Nam tìm thấy 30 thi thể trong thảm họa động đất ở Venezuela",
+      "summary": "Tính đến hết ngày 2.7, đoàn cứu hộ, cứu nạn Việt Nam tại Venezuela đã tìm thấy 30 thi thể nạn nhân trong đống đổ nát và bàn giao cho chính quyền địa phương nước bạn.",
+      "url": "https://thanhnien.vn/doan-cuu-ho-viet-nam-tim-thay-30-thi-the-trong-tham-hoa-dong-dat-o-venezuela-185260703123211337.htm",
+      "source": "Thanh Niên",
+      "sourceKey": "thanhnien",
+      "publishedAt": "2026-07-03T12:36:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "924d6ff7c24f",
+      "title": "Concert BTS không được cấp phép tổ chức",
+      "summary": "Ba đêm concert của BTS đang đối mặt với biến số lớn khi sân vận động được công bố từ trước không được cấp phép tổ chức.",
+      "url": "https://kenh14.vn/concert-bts-khong-duoc-cap-phep-to-chuc-215260703122207085.chn",
+      "source": "Kenh14",
+      "sourceKey": "kenh14",
+      "publishedAt": "2026-07-03T12:32:00+07:00",
+      "category": "Tin tức"
+    },
     {
       "id": "2ead603d17e7",
       "title": "JBL Go 5: Loa tí hon nhưng sở hữu nhiều công nghệ đáng chú ý trong tầm giá",
@@ -1251,6 +1271,16 @@
       "category": "Chứng khoán"
     },
     {
+      "id": "06267d756343",
+      "title": "Ông Đỗ Thành Nhân làm Chủ tịch VKC",
+      "summary": "Ông Đỗ Thành Nhân được bầu làm Chủ tịch HĐQT VKC nhiệm kỳ 2026-2031, kế hoạch chuyển hướng sang ngành may mặc, đồng thời đối mặt với áp lực tài chính lớn.",
+      "url": "https://24hmoney.vn/news/ong-do-thanh-nhan-lam-chu-tich-vkc-c2a2802052.html",
+      "source": "24HMoney",
+      "sourceKey": "24hmoney",
+      "publishedAt": "2026-07-03T10:38:12.924933+07:00",
+      "category": "Kinh doanh"
+    },
+    {
       "id": "467b123646c0",
       "title": "An Khánh, Bình Trưng - Khi cấp phường gánh trọng trách tỉ đô",
       "summary": "Không còn chỉ thực hiện chức năng quản lý hành chính cơ sở như trước, sau sắp xếp mô hình chính quyền hai cấp, nhiều phường tại TP.HCM đang trực tiếp đảm nhận các nhiệm vụ liên quan đến những dự án có quy mô hàng ngàn tỉ đồng.",
@@ -1309,16 +1339,6 @@
       "sourceKey": "24hmoney",
       "publishedAt": "2026-07-03T10:33:54+07:00",
       "category": "Chứng khoán"
-    },
-    {
-      "id": "06267d756343",
-      "title": "Ông Đỗ Thành Nhân làm Chủ tịch VKC",
-      "summary": "Ông Đỗ Thành Nhân được bầu làm Chủ tịch HĐQT VKC nhiệm kỳ 2026-2031, kế hoạch chuyển hướng sang ngành may mặc, đồng thời đối mặt với áp lực tài chính lớn.",
-      "url": "https://24hmoney.vn/news/ong-do-thanh-nhan-lam-chu-tich-vkc-c2a2802052.html",
-      "source": "24HMoney",
-      "sourceKey": "24hmoney",
-      "publishedAt": "2026-07-03T10:33:02.585194+07:00",
-      "category": "Kinh doanh"
     },
     {
       "id": "75f2fbb215b6",
@@ -1491,32 +1511,12 @@
       "category": "Tin tức"
     },
     {
-      "id": "7df0ec51b3c2",
-      "title": "Bắt giữ tàu vận chuyển 30.000 lít dầu DO không rõ nguồn gốc trên biển",
-      "summary": "(Dân trí) - Tàu cá chở khoảng 30.000 lít dầu DO không có hóa đơn, chứng từ chứng minh nguồn gốc hợp pháp vừa bị lực lượng hải quan bắt giữ trên vùng biển TPHCM.",
-      "url": "https://dantri.com.vn/kinh-doanh/bat-giu-tau-van-chuyen-30000-lit-dau-do-khong-ro-nguon-goc-tren-bien-20260703100434449.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-03T10:26:54+07:00",
-      "category": "Tin tức"
-    },
-    {
       "id": "c9e5ff8ebbba",
       "title": "Ronaldo bác tin chia tay Bồ Đào Nha sau World Cup 2026",
       "summary": "Cristiano Ronaldo đã lên tiếng phủ nhận thông tin anh sẽ giã từ sự nghiệp thi đấu quốc tế sau khi World Cup 2026 khép lại.",
       "url": "https://tuoitre.vn/ronaldo-bac-tin-chia-tay-bo-dao-nha-sau-world-cup-2026-10026070309414788.htm",
       "source": "Tuổi Trẻ",
       "sourceKey": "tuoitre",
-      "publishedAt": "2026-07-03T10:25:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "d0eacffa8fb4",
-      "title": "10 giá trị cao cấp mới trên SUV Hybrid Mazda CX-60",
-      "summary": "(Dân trí) - Mazda mở ra chương mới Japanese Premium tại Việt Nam với 10 giá trị cao cấp mới định hình nên mẫu SUV Hybrid CX-60.",
-      "url": "https://dantri.com.vn/o-to-xe-may/10-gia-tri-cao-cap-moi-tren-suv-hybrid-mazda-cx-60-20260703091439424.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
       "publishedAt": "2026-07-03T10:25:00+07:00",
       "category": "Tin tức"
     },
@@ -1538,16 +1538,6 @@
       "source": "Thanh Niên",
       "sourceKey": "thanhnien",
       "publishedAt": "2026-07-03T10:24:00+07:00",
-      "category": "Tin tức"
-    },
-    {
-      "id": "81352c438f01",
-      "title": "Cô gái Hà Nội tố có gián trong nước ép, chủ quán nói \"không biết từ đâu\"",
-      "summary": "(Dân trí) - Chủ quán trên đường Nguyễn Chí Thanh, Hà Nội cho biết, chưa xác định được con gián đã vào cốc bằng cách nào. Cơ sở vẫn duy trì việc vệ sinh, song trong kinh doanh có thể xảy ra sự cố ngoài ý muốn.",
-      "url": "https://dantri.com.vn/du-lich/co-gai-ha-noi-to-co-gian-trong-nuoc-ep-chu-quan-noi-khong-biet-tu-dau-20260703084905480.htm",
-      "source": "Dân Trí",
-      "sourceKey": "dantri",
-      "publishedAt": "2026-07-03T10:23:51+07:00",
       "category": "Tin tức"
     },
     {
@@ -1791,16 +1781,6 @@
       "category": "Tin tức"
     },
     {
-      "id": "1f1f1334cd00",
-      "title": "Ca sĩ Tăng Nhật Tuệ bị bắt vì liên quan đường dây ma túy",
-      "summary": "Từ dấu hiệu nghi vấn tại một khách sạn trên địa bàn, Công an phường Chánh Hưng (TP.HCM) đã triệt phá một đường dây ma túy, xử lý 48 người liên quan. Đáng chú ý, ca sĩ - nhạc sĩ Tăng Nhật Tuệ bị xác định có hành vi tàng trữ trái phép chất ma túy và liên quan đến việc tổ chức sử dụ",
-      "url": "https://thanhnien.vn/ca-si-tang-nhat-tue-bi-bat-vi-lien-quan-duong-day-ma-tuy-18526070310112329.htm",
-      "source": "Thanh Niên",
-      "sourceKey": "thanhnien",
-      "publishedAt": "2026-07-03T10:11:00+07:00",
-      "category": "Tin tức"
-    },
-    {
       "id": "4c592967627f",
       "title": "WinRAR ra phiên bản mới 'nhờ người dùng chịu trả tiền'",
       "summary": "WinRAR, phần mềm nén và giải nén tệp tin quen thuộc trên Windows, thông báo phát hành phiên bản 7.23 kèm lời cảm ơn hài hước.",
@@ -2005,6 +1985,26 @@
       "title": "Tôi bán ngay khi chung cư đạt đỉnh, đem tiền gửi tiết kiệm lãi 8%",
       "summary": "Tôi biết rằng căn hộ không thể tăng mãi được, phải có điểm dừng và thậm chí quay đầu giảm.",
       "url": "https://vnexpress.net/gia-can-ho-chung-cu-ha-noi-tphcm-ban-can-ho-lay-tien-gui-tiet-kiem-5092700.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T10:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "8e931282a370",
+      "title": "Dragon Capital: Gỡ khó bài toán vốn giúp doanh nghiệp đạt lộ trình bền vững",
+      "summary": "Nâng hạng thị trường, nới lỏng quy định niêm yết, tạo cơ chế để nhóm FDI duy trì ngoại tệ, là những đề xuất của Chủ tịch Dragon Capital nhằm giúp doanh nghiệp tăng năng lực cạnh tranh.",
+      "url": "https://vnexpress.net/dragon-capital-go-kho-bai-toan-von-giup-doanh-nghiep-dat-lo-trinh-ben-vung-5092904.html",
+      "source": "VnExpress",
+      "sourceKey": "vnexpress",
+      "publishedAt": "2026-07-03T10:00:00+07:00",
+      "category": "Tin tức"
+    },
+    {
+      "id": "07a7a5229f51",
+      "title": "Khi nào nên khám chuyên khoa tâm thần?",
+      "summary": "Mất ngủ kéo dài, lo âu, buồn chán, dễ cáu gắt hoặc suy giảm trí nhớ là những dấu hiệu cho thấy bạn nên đi khám tại chuyên khoa tâm thần.",
+      "url": "https://vnexpress.net/khi-nao-nen-kham-chuyen-khoa-tam-than-5092878.html",
       "source": "VnExpress",
       "sourceKey": "vnexpress",
       "publishedAt": "2026-07-03T10:00:00+07:00",
