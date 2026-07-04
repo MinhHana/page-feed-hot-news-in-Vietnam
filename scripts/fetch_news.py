@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
@@ -63,6 +64,23 @@ RELATIVE_UNITS = {
 RELATIVE_MULTIPLIERS = {"tháng": 30, "năm": 365}
 IMAGE_SRC_PATTERN = re.compile(r"""src=["']([^"']+)["']""", re.IGNORECASE)
 MEDIA_CONTENT_TAG = "{http://search.yahoo.com/mrss/}content"
+VN_DATETIME_LABEL_PATTERN = re.compile(
+    r"(\d{1,2}):(\d{2}),\s*(\d{2})/(\d{2})/(\d{4})"
+)
+ARTICLE_PUBLISHED_META_PATTERN = re.compile(
+    r'<meta[^>]+property=["\']article:published_time["\'][^>]+content=["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+ARTICLE_PUBLISHED_META_ALT_PATTERN = re.compile(
+    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']article:published_time["\']',
+    re.IGNORECASE,
+)
+ARTICLE_META_TIME_PATTERN = re.compile(
+    r'class=["\']article-meta__time["\'][^>]*>([^<]+)<',
+    re.IGNORECASE,
+)
+IMAGE_UPLOAD_DATE_PATTERN = re.compile(r"/uploads/(\d{4})/(\d{2})/(\d{2})/")
+ARTICLE_DATE_FETCH_WORKERS = 8
 
 
 def make_session() -> requests.Session:
@@ -153,8 +171,70 @@ def extract_image_from_element(element) -> str:
     return ""
 
 
-def fallback_published_at(index: int, now: datetime) -> str:
-    return to_iso(now - timedelta(minutes=index))
+def parse_vn_datetime_label(label: str) -> datetime | None:
+    match = VN_DATETIME_LABEL_PATTERN.search(label.strip())
+    if not match:
+        return None
+
+    hour, minute, day, month, year = map(int, match.groups())
+    try:
+        return datetime(year, month, day, hour, minute, tzinfo=VN_TZ)
+    except ValueError:
+        return None
+
+
+def parse_image_upload_date(url: str) -> str | None:
+    match = IMAGE_UPLOAD_DATE_PATTERN.search(url)
+    if not match:
+        return None
+
+    year, month, day = map(int, match.groups())
+    return to_iso(datetime(year, month, day, 12, 0, tzinfo=VN_TZ))
+
+
+def extract_published_at_from_html(html: str) -> str | None:
+    for pattern in (ARTICLE_PUBLISHED_META_PATTERN, ARTICLE_PUBLISHED_META_ALT_PATTERN):
+        match = pattern.search(html)
+        if match:
+            try:
+                return to_iso(date_parser.parse(match.group(1)))
+            except (ValueError, TypeError):
+                pass
+
+    match = ARTICLE_META_TIME_PATTERN.search(html)
+    if match:
+        parsed = parse_vn_datetime_label(match.group(1))
+        if parsed:
+            return to_iso(parsed)
+
+    return None
+
+
+def fetch_article_published_at(url: str) -> str | None:
+    session = make_session()
+    try:
+        response = session.get(url, timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        return extract_published_at_from_html(response.text)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def fetch_published_at_map(urls: list[str]) -> dict[str, str | None]:
+    published_at_map: dict[str, str | None] = {}
+    if not urls:
+        return published_at_map
+
+    with ThreadPoolExecutor(max_workers=ARTICLE_DATE_FETCH_WORKERS) as executor:
+        futures = {executor.submit(fetch_article_published_at, url): url for url in urls}
+        for future in as_completed(futures):
+            url = futures[future]
+            try:
+                published_at_map[url] = future.result()
+            except Exception:  # noqa: BLE001
+                published_at_map[url] = None
+
+    return published_at_map
 
 
 def build_article(
@@ -301,10 +381,10 @@ def fetch_vneconomy(session: requests.Session, source: dict[str, str]) -> list[d
         print(f"[scrape] {source['name']}: {exc}")
         return articles
 
-    now = datetime.now(VN_TZ)
     seen: set[str] = set()
+    pending: list[dict[str, Any]] = []
 
-    for index, article_el in enumerate(soup.select("article")):
+    for article_el in soup.select("article"):
         link_el = article_el.select_one("h2 a[href], h3 a[href], .title a[href]")
         if not link_el:
             candidates = [
@@ -330,17 +410,34 @@ def fetch_vneconomy(session: requests.Session, source: dict[str, str]) -> list[d
 
         summary_el = article_el.select_one("p, .sapo, .description")
         summary = clean_text(summary_el.get_text() if summary_el else "")
+        image = extract_image_from_element(article_el)
+
+        pending.append(
+            {
+                "title": title,
+                "url": url,
+                "summary": summary,
+                "image": image,
+            }
+        )
+
+    published_at_map = fetch_published_at_map([item["url"] for item in pending])
+
+    for item in pending:
+        published_at = published_at_map.get(item["url"])
+        if not published_at:
+            published_at = parse_image_upload_date(item["image"] or item["url"])
 
         articles.append(
             build_article(
-                title=title,
-                url=url,
+                title=item["title"],
+                url=item["url"],
                 source=source["name"],
                 source_key=source["key"],
                 category=source.get("category", "Kinh tế"),
-                summary=summary,
-                image=extract_image_from_element(article_el),
-                published_at=fallback_published_at(index, now),
+                summary=item["summary"],
+                image=item["image"],
+                published_at=published_at,
             )
         )
 
@@ -359,10 +456,10 @@ def fetch_vietstock(session: requests.Session, source: dict[str, str]) -> list[d
         print(f"[scrape] {source['name']}: {exc}")
         return articles
 
-    now = datetime.now(VN_TZ)
     seen: set[str] = set()
+    pending: list[dict[str, Any]] = []
 
-    for index, link_el in enumerate(soup.select('a[href*="/20"]')):
+    for link_el in soup.select('a[href*="/20"]'):
         href = (link_el.get("href") or "").strip()
         title = clean_text(link_el.get_text())
         if not title or len(title) < 20 or not href.endswith(".htm"):
@@ -376,20 +473,38 @@ def fetch_vietstock(session: requests.Session, source: dict[str, str]) -> list[d
         seen.add(url)
 
         container = link_el.find_parent(["article", "div", "li"])
-        published_at = fallback_published_at(index, now)
+        image = extract_image_from_element(container)
+        published_at = None
         date_match = re.search(r"/(20\d{2})/(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/", url)
         if date_match:
             year, month, day = map(int, date_match.groups())
             published_at = to_iso(datetime(year, month, day, 12, 0, tzinfo=VN_TZ))
 
+        pending.append(
+            {
+                "title": title,
+                "url": url,
+                "image": image,
+                "published_at": published_at,
+            }
+        )
+
+    urls_to_fetch = [item["url"] for item in pending if not item["published_at"]]
+    published_at_map = fetch_published_at_map(urls_to_fetch)
+
+    for item in pending:
+        published_at = item["published_at"] or published_at_map.get(item["url"])
+        if not published_at:
+            published_at = parse_image_upload_date(item["image"] or item["url"])
+
         articles.append(
             build_article(
-                title=title,
-                url=url,
+                title=item["title"],
+                url=item["url"],
                 source=source["name"],
                 source_key=source["key"],
                 category=source.get("category", "Chứng khoán"),
-                image=extract_image_from_element(container),
+                image=item["image"],
                 published_at=published_at,
             )
         )
