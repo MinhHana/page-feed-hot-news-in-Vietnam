@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 from html import unescape
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 from xml.etree import ElementTree
 
 import requests
@@ -23,7 +23,8 @@ OUTPUT = ROOT / "feed" / "news.json"
 MAX_ARTICLES = 200
 REQUEST_TIMEOUT = 25
 USER_AGENT = (
-    "Mozilla/5.0 (compatible; VietnamNewsMatrix/1.0; +https://github.com/)"
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 )
 
 VN_TZ = timezone(timedelta(hours=7))
@@ -34,6 +35,17 @@ RSS_SOURCES = [
     {"key": "thanhnien", "name": "Thanh Niên", "url": "https://thanhnien.vn/rss/home.rss"},
     {"key": "dantri", "name": "Dân Trí", "url": "https://dantri.com.vn/rss/home.rss"},
     {"key": "kenh14", "name": "Kenh14", "url": "https://kenh14.vn/rss/home.rss"},
+    {
+        "key": "cafef",
+        "name": "CafeF",
+        "url": "https://cafef.vn/home.rss",
+        "category": "Tài chính",
+    },
+]
+
+SCRAPE_SOURCES = [
+    {"key": "vneconomy", "name": "VnEconomy", "url": "https://vneconomy.vn/", "category": "Kinh tế"},
+    {"key": "vietstock", "name": "Vietstock", "url": "https://vietstock.vn/", "category": "Chứng khoán"},
 ]
 
 RELATIVE_TIME_PATTERN = re.compile(
@@ -99,7 +111,12 @@ def parse_nuxt_timestamps(html: str) -> list[int]:
 
 def looks_like_image(url: str) -> bool:
     lowered = url.lower().split("?", 1)[0]
-    return lowered.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif"))
+    if lowered.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif")):
+        return True
+    return any(
+        marker in lowered
+        for marker in ("cdn", "vcdn", "kenh14cdn", "cafefcdn", "premedia", "/zoom/", "/avatar")
+    )
 
 
 def extract_image_url(item: ElementTree.Element, raw_description: str) -> str:
@@ -121,6 +138,47 @@ def extract_image_url(item: ElementTree.Element, raw_description: str) -> str:
             return unescape(match.group(1).strip())
 
     return ""
+
+
+def extract_image_from_element(element) -> str:
+    if element is None:
+        return ""
+
+    for img in element.select("img"):
+        for attr in ("data-src", "data-original", "src"):
+            value = (img.get(attr) or "").strip()
+            if value and not value.startswith("data:") and looks_like_image(value):
+                return unescape(value)
+
+    return ""
+
+
+def fallback_published_at(index: int, now: datetime) -> str:
+    return to_iso(now - timedelta(minutes=index))
+
+
+def build_article(
+    *,
+    title: str,
+    url: str,
+    source: str,
+    source_key: str,
+    category: str,
+    summary: str = "",
+    image: str = "",
+    published_at: str | None = None,
+) -> dict[str, Any]:
+    return {
+        "id": article_id(url),
+        "title": title,
+        "summary": summary[:280],
+        "url": url,
+        "image": image,
+        "source": source,
+        "sourceKey": source_key,
+        "publishedAt": published_at,
+        "category": category,
+    }
 
 
 def fetch_rss_source(session: requests.Session, source: dict[str, str]) -> list[dict[str, Any]]:
@@ -153,17 +211,16 @@ def fetch_rss_source(session: requests.Session, source: dict[str, str]) -> list[
                 published_at = None
 
         articles.append(
-            {
-                "id": article_id(link),
-                "title": title,
-                "summary": summary[:280],
-                "url": link,
-                "image": image,
-                "source": source["name"],
-                "sourceKey": source["key"],
-                "publishedAt": published_at,
-                "category": "Tin tức",
-            }
+            build_article(
+                title=title,
+                url=link,
+                source=source["name"],
+                source_key=source["key"],
+                category=source.get("category", "Tin tức"),
+                summary=summary,
+                image=image,
+                published_at=published_at,
+            )
         )
 
     print(f"[rss] {source['name']}: {len(articles)} articles")
@@ -232,6 +289,123 @@ def fetch_24hmoney(session: requests.Session) -> list[dict[str, Any]]:
     return articles
 
 
+def fetch_vneconomy(session: requests.Session, source: dict[str, str]) -> list[dict[str, Any]]:
+    articles: list[dict[str, Any]] = []
+    skip_parts = ("tap-chi", "doanh-nghiep-niem-yet", "san-pham", "rss", "video")
+
+    try:
+        response = session.get(source["url"], timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[scrape] {source['name']}: {exc}")
+        return articles
+
+    now = datetime.now(VN_TZ)
+    seen: set[str] = set()
+
+    for index, article_el in enumerate(soup.select("article")):
+        link_el = article_el.select_one("h2 a[href], h3 a[href], .title a[href]")
+        if not link_el:
+            candidates = [
+                anchor
+                for anchor in article_el.select("a[href]")
+                if len(clean_text(anchor.get_text())) >= 20
+            ]
+            link_el = candidates[0] if candidates else None
+        if not link_el:
+            continue
+
+        title = clean_text(link_el.get_text())
+        href = (link_el.get("href") or "").strip()
+        if not title or len(title) < 20 or not href.endswith(".htm"):
+            continue
+        if any(part in href for part in skip_parts):
+            continue
+
+        url = urljoin(source["url"], href)
+        if url in seen:
+            continue
+        seen.add(url)
+
+        summary_el = article_el.select_one("p, .sapo, .description")
+        summary = clean_text(summary_el.get_text() if summary_el else "")
+
+        articles.append(
+            build_article(
+                title=title,
+                url=url,
+                source=source["name"],
+                source_key=source["key"],
+                category=source.get("category", "Kinh tế"),
+                summary=summary,
+                image=extract_image_from_element(article_el),
+                published_at=fallback_published_at(index, now),
+            )
+        )
+
+    print(f"[scrape] {source['name']}: {len(articles)} articles")
+    return articles
+
+
+def fetch_vietstock(session: requests.Session, source: dict[str, str]) -> list[dict[str, Any]]:
+    articles: list[dict[str, Any]] = []
+
+    try:
+        response = session.get(source["url"], timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+    except Exception as exc:  # noqa: BLE001
+        print(f"[scrape] {source['name']}: {exc}")
+        return articles
+
+    now = datetime.now(VN_TZ)
+    seen: set[str] = set()
+
+    for index, link_el in enumerate(soup.select('a[href*="/20"]')):
+        href = (link_el.get("href") or "").strip()
+        title = clean_text(link_el.get_text())
+        if not title or len(title) < 20 or not href.endswith(".htm"):
+            continue
+        if "/chu-de/" in href or "/tag/" in href:
+            continue
+
+        url = urljoin(source["url"], href)
+        if url in seen:
+            continue
+        seen.add(url)
+
+        container = link_el.find_parent(["article", "div", "li"])
+        published_at = fallback_published_at(index, now)
+        date_match = re.search(r"/(20\d{2})/(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])/", url)
+        if date_match:
+            year, month, day = map(int, date_match.groups())
+            published_at = to_iso(datetime(year, month, day, 12, 0, tzinfo=VN_TZ))
+
+        articles.append(
+            build_article(
+                title=title,
+                url=url,
+                source=source["name"],
+                source_key=source["key"],
+                category=source.get("category", "Chứng khoán"),
+                image=extract_image_from_element(container),
+                published_at=published_at,
+            )
+        )
+
+    print(f"[scrape] {source['name']}: {len(articles)} articles")
+    return articles
+
+
+def fetch_scrape_source(session: requests.Session, source: dict[str, str]) -> list[dict[str, Any]]:
+    if source["key"] == "vneconomy":
+        return fetch_vneconomy(session, source)
+    if source["key"] == "vietstock":
+        return fetch_vietstock(session, source)
+    return []
+
+
 def sort_key(article: dict[str, Any]) -> datetime:
     value = article.get("publishedAt")
     if not value:
@@ -264,16 +438,24 @@ def fetch_all_news() -> dict[str, Any]:
         all_articles.extend(fetch_rss_source(session, source))
         time.sleep(0.4)
 
+    for source in SCRAPE_SOURCES:
+        all_articles.extend(fetch_scrape_source(session, source))
+        time.sleep(0.4)
+
     all_articles.extend(fetch_24hmoney(session))
 
     all_articles = dedupe_articles(all_articles)
     all_articles.sort(key=sort_key, reverse=True)
     all_articles = all_articles[:MAX_ARTICLES]
 
+    source_names = [source["name"] for source in RSS_SOURCES]
+    source_names.extend(source["name"] for source in SCRAPE_SOURCES)
+    source_names.append("24HMoney")
+
     return {
         "updatedAt": to_iso(datetime.now(VN_TZ)),
         "total": len(all_articles),
-        "sources": [source["name"] for source in RSS_SOURCES] + ["24HMoney"],
+        "sources": source_names,
         "articles": all_articles,
     }
 

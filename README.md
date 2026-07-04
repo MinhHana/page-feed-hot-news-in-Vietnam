@@ -5,6 +5,7 @@ Trang web tổng hợp tin tức mới nhất từ các báo Việt Nam và **24
 ## Nguồn dữ liệu
 
 - VnExpress, Tuổi Trẻ, Thanh Niên, Dân Trí, Kenh14 (RSS)
+- CafeF (RSS), VnEconomy, Vietstock (scrape trang chủ)
 - 24HMoney (scrape trang live)
 
 ## Khuyến nghị: Deploy lên Render (miễn phí)
