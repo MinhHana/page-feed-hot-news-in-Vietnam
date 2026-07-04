@@ -49,6 +49,8 @@ RELATIVE_UNITS = {
     "năm": "days",  # approximate as 365 days
 }
 RELATIVE_MULTIPLIERS = {"tháng": 30, "năm": 365}
+IMAGE_SRC_PATTERN = re.compile(r"""src=["']([^"']+)["']""", re.IGNORECASE)
+MEDIA_CONTENT_TAG = "{http://search.yahoo.com/mrss/}content"
 
 
 def make_session() -> requests.Session:
@@ -95,6 +97,32 @@ def parse_nuxt_timestamps(html: str) -> list[int]:
     return [int(value) for value in re.findall(r"published_at=(\d{10})", html)]
 
 
+def looks_like_image(url: str) -> bool:
+    lowered = url.lower().split("?", 1)[0]
+    return lowered.endswith((".jpg", ".jpeg", ".png", ".webp", ".gif"))
+
+
+def extract_image_url(item: ElementTree.Element, raw_description: str) -> str:
+    enclosure = item.find("enclosure")
+    if enclosure is not None:
+        url = (enclosure.get("url") or "").strip()
+        if url and looks_like_image(url):
+            return unescape(url)
+
+    media = item.find(MEDIA_CONTENT_TAG)
+    if media is not None:
+        url = (media.get("url") or "").strip()
+        if url:
+            return unescape(url)
+
+    if raw_description:
+        match = IMAGE_SRC_PATTERN.search(raw_description)
+        if match:
+            return unescape(match.group(1).strip())
+
+    return ""
+
+
 def fetch_rss_source(session: requests.Session, source: dict[str, str]) -> list[dict[str, Any]]:
     articles: list[dict[str, Any]] = []
     try:
@@ -109,7 +137,9 @@ def fetch_rss_source(session: requests.Session, source: dict[str, str]) -> list[
     for item in root.findall(".//item"):
         title = clean_text(item.findtext("title"))
         link = clean_text(item.findtext("link"))
-        summary = clean_text(item.findtext("description"))
+        raw_description = item.findtext("description") or ""
+        summary = clean_text(raw_description)
+        image = extract_image_url(item, raw_description)
         pub_raw = clean_text(item.findtext("pubDate"))
 
         if not title or not link:
@@ -128,6 +158,7 @@ def fetch_rss_source(session: requests.Session, source: dict[str, str]) -> list[
                 "title": title,
                 "summary": summary[:280],
                 "url": link,
+                "image": image,
                 "source": source["name"],
                 "sourceKey": source["key"],
                 "publishedAt": published_at,
@@ -189,6 +220,7 @@ def fetch_24hmoney(session: requests.Session) -> list[dict[str, Any]]:
                 "title": title,
                 "summary": summary[:280],
                 "url": link,
+                "image": "",
                 "source": "24HMoney",
                 "sourceKey": "24hmoney",
                 "publishedAt": published_at,

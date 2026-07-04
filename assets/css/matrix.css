@@ -262,6 +262,37 @@ body {
   animation: fade-in 0.35s ease;
 }
 
+.news-item-body {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.news-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.news-thumb-link {
+  display: block;
+  flex-shrink: 0;
+}
+
+.news-thumb {
+  width: 112px;
+  height: 72px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: var(--title-glow);
+  background: var(--input-bg);
+  display: block;
+}
+
+.news-thumb-link:hover .news-thumb {
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
 .news-item:last-child {
   border-bottom: 0;
 }
@@ -360,6 +391,16 @@ body {
 
   .news-item {
     padding: 0.8rem 0.75rem;
+  }
+
+  .news-item-body {
+    flex-direction: column;
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
   }
 }
 
