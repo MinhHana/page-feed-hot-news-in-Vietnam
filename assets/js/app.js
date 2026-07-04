@@ -130,18 +130,29 @@ function renderArticles() {
       const source = escapeHtml(article.source);
       const category = escapeHtml(article.category || "Tin tức");
       const url = escapeHtml(article.url);
+      const image = article.image ? escapeHtml(article.image) : "";
+      const imageHtml = image
+        ? `<a class="news-thumb-link" href="${url}" target="_blank" rel="noopener noreferrer">
+            <img class="news-thumb" src="${image}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentElement.remove()">
+          </a>`
+        : "";
 
       return `
-        <li class="news-item">
-          <div class="news-meta">
-            <span class="news-time">[${time}]</span>
-            <span class="news-source">[${source}]</span>
-            <span class="news-category">#${category}</span>
+        <li class="news-item${image ? " has-image" : ""}">
+          <div class="news-item-body">
+            ${imageHtml}
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-time">[${time}]</span>
+                <span class="news-source">[${source}]</span>
+                <span class="news-category">#${category}</span>
+              </div>
+              <h2 class="news-title">
+                <a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>
+              </h2>
+              ${summary ? `<p class="news-summary">${summary}</p>` : ""}
+            </div>
           </div>
-          <h2 class="news-title">
-            <a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>
-          </h2>
-          ${summary ? `<p class="news-summary">${summary}</p>` : ""}
         </li>
       `;
     })
