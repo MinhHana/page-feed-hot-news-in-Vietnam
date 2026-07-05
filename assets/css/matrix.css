@@ -438,9 +438,10 @@ body {
 }
 
 .trident-icon {
-  width: 1.55rem;
-  height: auto;
+  width: 1.35rem;
+  height: 1.75rem;
   display: block;
+  object-fit: contain;
   transform: rotate(0deg);
   transition: transform 0.25s ease;
 }
