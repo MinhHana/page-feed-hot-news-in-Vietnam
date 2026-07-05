@@ -19,6 +19,7 @@ const elements = {
   refreshBtn: document.getElementById("refresh-btn"),
   empty: document.getElementById("empty-state"),
   error: document.getElementById("error-state"),
+  backToTop: document.getElementById("back-to-top"),
 };
 
 function formatTime(isoString) {
@@ -241,3 +242,25 @@ if (elements.refreshBtn) {
 
 loadNews();
 setInterval(() => loadNews(false), REFRESH_MS);
+
+const BACK_TO_TOP_OFFSET = 320;
+
+function updateBackToTopVisibility() {
+  if (!elements.backToTop) return;
+
+  const shouldShow = window.scrollY > BACK_TO_TOP_OFFSET;
+  elements.backToTop.classList.toggle("is-visible", shouldShow);
+  elements.backToTop.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  elements.backToTop.tabIndex = shouldShow ? 0 : -1;
+}
+
+function scrollToTop() {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
+}
+
+if (elements.backToTop) {
+  elements.backToTop.addEventListener("click", scrollToTop);
+  window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+  updateBackToTopVisibility();
+}
