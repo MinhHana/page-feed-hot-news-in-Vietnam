@@ -52,6 +52,39 @@ API:
 - `GET /api/news` — danh sách tin (cache 10 phút)
 - `GET /api/news?refresh=1` — fetch tin mới ngay
 - `GET /api/health` — kiểm tra server
+- `GET /api/ai/status` — trạng thái AI (OpenAI/Gemini)
+- `POST /api/ai/brief` — tóm tắt diễn biến tin mới (Phase 1)
+
+## Tóm tắt AI (Phase 1)
+
+Nút **✦ TÓM TẮT AI** trên trang web gọi `POST /api/ai/brief` để tóm tắt các tin mới trong 24 giờ.
+
+### Cấu hình API key trên Render
+
+1. Vào **Render Dashboard → vietnam-news-matrix → Environment**
+2. Thêm ít nhất một biến (có thể thêm cả hai — OpenAI ưu tiên, Gemini fallback):
+
+| Biến | Mô tả |
+|------|--------|
+| `OPENAI_API_KEY` | API key OpenAI (khuyến nghị `gpt-4o-mini`) |
+| `GEMINI_API_KEY` | API key Google Gemini (fallback `gemini-2.0-flash`) |
+| `AI_ENABLED` | `true` / `false` (mặc định `true`) |
+| `AI_DAILY_REQUEST_LIMIT` | Giới hạn request/ngày/IP (mặc định `50`) |
+| `AI_BRIEF_CACHE_TTL` | Cache tóm tắt (giây, mặc định `900`) |
+
+3. **Save Changes** → Render tự deploy lại
+
+### Khi chưa có API key
+
+Nút vẫn hoạt động ở chế độ **fallback**: liệt kê nhanh các tiêu đề tin mới nhất thay vì tóm tắt AI.
+
+### Ví dụ gọi API
+
+```bash
+curl -X POST http://localhost:8000/api/ai/brief \
+  -H "Content-Type: application/json" \
+  -d '{"query":"vnindex","source":"all","hours":24}'
+```
 
 ## Các host miễn phí khác (tham khảo)
 
@@ -67,7 +100,9 @@ API:
 ## Cấu trúc
 
 ```
-├── server/main.py          # FastAPI: web + API /api/news
+├── server/
+│   ├── main.py             # FastAPI: web + API
+│   └── ai/                 # Tóm tắt AI (Phase 1)
 ├── scripts/fetch_news.py   # Logic thu thập tin
 ├── feed/news.json          # Dữ liệu mẫu (chạy local, không cập nhật tự động)
 ├── index.html              # Giao diện Matrix
