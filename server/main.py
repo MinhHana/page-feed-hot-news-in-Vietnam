@@ -87,14 +87,13 @@ def ai_status() -> dict[str, Any]:
         "enabled": config.enabled,
         "configured": config.is_configured,
         "providers": config.provider_names(),
-        "openaiModel": config.openai_model if config.has_openai else None,
-        "geminiModel": config.gemini_model if config.has_gemini else None,
+        "grokModel": config.grok_model if config.has_grok else None,
         "dailyRequestLimit": config.daily_request_limit,
         "briefCacheTtl": config.brief_cache_ttl,
         "message": (
-            "AI sẵn sàng."
+            "AI sẵn sàng (Grok)."
             if config.is_configured
-            else "Thêm OPENAI_API_KEY hoặc GEMINI_API_KEY trên Render để bật tóm tắt AI."
+            else "Thêm XAI_API_KEY (Grok API key) trên Render để bật tóm tắt AI."
         ),
     }
 

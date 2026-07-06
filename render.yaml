@@ -17,7 +17,7 @@ services:
         value: "50"
       - key: AI_BRIEF_CACHE_TTL
         value: "900"
-      - key: OPENAI_API_KEY
+      - key: XAI_API_KEY
         sync: false
-      - key: GEMINI_API_KEY
-        sync: false
+      - key: AI_GROK_MODEL
+        value: "grok-4.3"

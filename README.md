@@ -59,15 +59,16 @@ API:
 
 Nút **✦ TÓM TẮT AI** trên trang web gọi `POST /api/ai/brief` để tóm tắt các tin mới trong 24 giờ.
 
-### Cấu hình API key trên Render
+### Cấu hình Grok API key trên Render
 
-1. Vào **Render Dashboard → vietnam-news-matrix → Environment**
-2. Thêm ít nhất một biến (có thể thêm cả hai — OpenAI ưu tiên, Gemini fallback):
+1. Lấy key tại [console.x.ai](https://console.x.ai) → **API Keys** → **Create API Key** (dạng `xai-...`)
+2. Vào **Render Dashboard → vietnam-news-matrix → Environment**
+2. Thêm biến môi trường:
 
 | Biến | Mô tả |
 |------|--------|
-| `OPENAI_API_KEY` | API key OpenAI (khuyến nghị `gpt-4o-mini`) |
-| `GEMINI_API_KEY` | API key Google Gemini (fallback `gemini-2.0-flash`) |
+| `XAI_API_KEY` | API key Grok từ [console.x.ai](https://console.x.ai) (dạng `xai-...`) |
+| `AI_GROK_MODEL` | Model Grok (mặc định `grok-4.3`) |
 | `AI_ENABLED` | `true` / `false` (mặc định `true`) |
 | `AI_DAILY_REQUEST_LIMIT` | Giới hạn request/ngày/IP (mặc định `50`) |
 | `AI_BRIEF_CACHE_TTL` | Cache tóm tắt (giây, mặc định `900`) |
