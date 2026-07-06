@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vietnam News Matrix Feed</title>
   <meta name="description" content="Tổng hợp tin tức mới nhất từ các báo Việt Nam và 24HMoney">
-  <link rel="stylesheet" href="assets/css/matrix.css?v=12">
+  <link rel="stylesheet" href="assets/css/matrix.css?v=13">
   <script>
     (function () {
       const path = window.location.pathname;
@@ -41,26 +41,11 @@
         </label>
         <div class="action-buttons">
           <button id="refresh-btn" class="refresh-btn" type="button">⟳ TẢI LẠI TIN</button>
-          <button id="ai-brief-btn" class="ai-brief-btn" type="button" title="Tóm tắt diễn biến tin mới">✦ TÓM TẮT AI</button>
           <button id="ai-digest-btn" class="ai-digest-btn" type="button" title="Tổng hợp toàn bộ tin theo chuyên mục">📰 BẢN TIN TỔNG HỢP</button>
         </div>
         <div id="source-filters" class="source-filters" role="group" aria-label="Lọc theo nguồn"></div>
       </div>
     </header>
-
-    <section id="ai-brief-panel" class="ai-brief-panel hidden" aria-live="polite">
-      <div class="ai-brief-header">
-        <div>
-          <span class="prompt">&gt;</span>
-          <span class="ai-brief-title">AI BRIEF</span>
-          <span id="ai-brief-meta" class="ai-brief-meta"></span>
-        </div>
-        <button id="ai-brief-close" class="ai-brief-close" type="button" aria-label="Đóng tóm tắt">×</button>
-      </div>
-      <div id="ai-brief-content" class="ai-brief-content"></div>
-      <div id="ai-brief-notice" class="ai-brief-notice hidden"></div>
-      <div id="ai-brief-citations" class="ai-brief-citations hidden"></div>
-    </section>
 
     <section id="ai-digest-panel" class="ai-digest-panel hidden" aria-live="polite">
       <div class="ai-digest-header">
@@ -112,7 +97,6 @@
 
   <script src="assets/js/matrix-rain.js?v=7"></script>
   <script src="assets/js/app.js?v=8"></script>
-  <script src="assets/js/ai-brief.js?v=3"></script>
   <script src="assets/js/ai-digest.js?v=1"></script>
 </body>
 </html>
