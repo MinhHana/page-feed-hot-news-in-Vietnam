@@ -107,12 +107,12 @@ function updateAiButtonHint() {
   if (!aiElements.btn || !aiState.status) return;
 
   if (aiState.status.configured) {
-    aiElements.btn.title = "Tóm tắt diễn biến tin mới bằng AI (OpenAI/Gemini)";
+    aiElements.btn.title = "Tóm tắt diễn biến tin mới bằng Grok AI";
     return;
   }
 
   aiElements.btn.title =
-    "Tóm tắt nhanh danh sách tin (thêm API key trên Render để bật AI đầy đủ)";
+    "Tóm tắt nhanh danh sách tin (thêm XAI_API_KEY trên Render để bật Grok AI)";
 }
 
 async function requestBrief() {

@@ -220,7 +220,7 @@ def generate_brief(
             ],
             "fallback": True,
             "message": (
-                "AI chưa bật. Thêm OPENAI_API_KEY hoặc GEMINI_API_KEY trong Environment "
+                "AI chưa bật. Thêm XAI_API_KEY (Grok API key) trong Environment "
                 "của Render để bật tóm tắt thông minh."
             ),
         }

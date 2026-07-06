@@ -5,6 +5,8 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
+XAI_API_BASE_URL = "https://api.x.ai/v1"
+
 
 def _env_bool(name: str, default: bool) -> bool:
     raw = os.getenv(name)
@@ -16,43 +18,30 @@ def _env_bool(name: str, default: bool) -> bool:
 @dataclass(frozen=True)
 class AIConfig:
     enabled: bool
-    openai_api_key: str
-    gemini_api_key: str
-    openai_model: str
-    gemini_model: str
+    xai_api_key: str
+    grok_model: str
     brief_cache_ttl: int
     daily_request_limit: int
     max_articles: int
     request_timeout: int
 
     @property
-    def has_openai(self) -> bool:
-        return bool(self.openai_api_key)
-
-    @property
-    def has_gemini(self) -> bool:
-        return bool(self.gemini_api_key)
+    def has_grok(self) -> bool:
+        return bool(self.xai_api_key)
 
     @property
     def is_configured(self) -> bool:
-        return self.enabled and (self.has_openai or self.has_gemini)
+        return self.enabled and self.has_grok
 
     def provider_names(self) -> list[str]:
-        providers: list[str] = []
-        if self.has_openai:
-            providers.append("openai")
-        if self.has_gemini:
-            providers.append("gemini")
-        return providers
+        return ["grok"] if self.has_grok else []
 
 
 def get_ai_config() -> AIConfig:
     return AIConfig(
         enabled=_env_bool("AI_ENABLED", True),
-        openai_api_key=os.getenv("OPENAI_API_KEY", "").strip(),
-        gemini_api_key=os.getenv("GEMINI_API_KEY", "").strip(),
-        openai_model=os.getenv("AI_OPENAI_MODEL", "gpt-4o-mini").strip(),
-        gemini_model=os.getenv("AI_GEMINI_MODEL", "gemini-2.0-flash").strip(),
+        xai_api_key=os.getenv("XAI_API_KEY", "").strip(),
+        grok_model=os.getenv("AI_GROK_MODEL", "grok-3-fast").strip(),
         brief_cache_ttl=int(os.getenv("AI_BRIEF_CACHE_TTL", "900")),
         daily_request_limit=int(os.getenv("AI_DAILY_REQUEST_LIMIT", "50")),
         max_articles=int(os.getenv("AI_BRIEF_MAX_ARTICLES", "40")),
