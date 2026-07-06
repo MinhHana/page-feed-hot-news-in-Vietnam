@@ -17,6 +17,12 @@ services:
         value: "50"
       - key: AI_BRIEF_CACHE_TTL
         value: "900"
+      - key: AI_DIGEST_MAX_ARTICLES
+        value: "200"
+      - key: AI_DIGEST_CACHE_TTL
+        value: "1800"
+      - key: AI_DIGEST_DAILY_LIMIT
+        value: "20"
       - key: XAI_API_KEY
         sync: false
       - key: AI_GROK_MODEL

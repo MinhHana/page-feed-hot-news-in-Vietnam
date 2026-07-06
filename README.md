@@ -52,12 +52,23 @@ API:
 - `GET /api/news` — danh sách tin (cache 10 phút)
 - `GET /api/news?refresh=1` — fetch tin mới ngay
 - `GET /api/health` — kiểm tra server
-- `GET /api/ai/status` — trạng thái AI (OpenAI/Gemini)
-- `POST /api/ai/brief` — tóm tắt diễn biến tin mới (Phase 1)
+- `GET /api/ai/status` — trạng thái AI (Grok)
+- `POST /api/ai/brief` — tóm tắt nhanh diễn biến tin mới (24h)
+- `POST /api/ai/digest` — bản tin tổng hợp toàn bộ theo chuyên mục (48h, map-reduce)
 
-## Tóm tắt AI (Phase 1)
+## Tóm tắt AI (Grok)
 
-Nút **✦ TÓM TẮT AI** trên trang web gọi `POST /api/ai/brief` để tóm tắt các tin mới trong 24 giờ.
+Trang web có hai nút AI:
+
+- **✦ TÓM TẮT AI** → `POST /api/ai/brief`: tóm tắt nhanh 3-5 bullet các tin mới trong 24h (tối đa 40 bài, 1 lần gọi Grok).
+- **📰 BẢN TIN TỔNG HỢP** → `POST /api/ai/digest`: tổng hợp **toàn bộ ~200 bài** trong 48h bằng **map-reduce**.
+
+### Cách hoạt động của Bản tin tổng hợp (map-reduce)
+
+1. Gom bài thành 5 chuyên mục: Kinh tế – Tài chính – Chứng khoán, Thời sự – Chính trị – Xã hội, Quốc tế, Đời sống – Sức khỏe – Khoa học, Thể thao – Giải trí.
+2. **Map:** Grok tóm tắt từng chuyên mục song song, giữ số liệu/tên riêng, gắn `articleIds`.
+3. **Reduce:** Grok ghép thành bản digest gồm `headline`, `🔥 ĐIỂM NÓNG` (5-7 mục) và các chuyên mục.
+4. Server resolve `articleIds` → link nguồn thật (chống bịa đặt).
 
 ### Cấu hình Grok API key trên Render
 
@@ -70,21 +81,31 @@ Nút **✦ TÓM TẮT AI** trên trang web gọi `POST /api/ai/brief` để tóm
 | `XAI_API_KEY` | API key Grok từ [console.x.ai](https://console.x.ai) (dạng `xai-...`) |
 | `AI_GROK_MODEL` | Model Grok (mặc định `grok-4.3`) |
 | `AI_ENABLED` | `true` / `false` (mặc định `true`) |
-| `AI_DAILY_REQUEST_LIMIT` | Giới hạn request/ngày/IP (mặc định `50`) |
-| `AI_BRIEF_CACHE_TTL` | Cache tóm tắt (giây, mặc định `900`) |
+| `AI_DAILY_REQUEST_LIMIT` | Giới hạn brief/ngày/IP (mặc định `50`) |
+| `AI_BRIEF_CACHE_TTL` | Cache tóm tắt nhanh (giây, mặc định `900`) |
+| `AI_DIGEST_MAX_ARTICLES` | Số bài tối đa cho bản tin tổng hợp (mặc định `200`) |
+| `AI_DIGEST_CACHE_TTL` | Cache bản tin tổng hợp (giây, mặc định `1800`) |
+| `AI_DIGEST_DAILY_LIMIT` | Giới hạn digest/ngày/IP (mặc định `20`) |
+| `AI_DIGEST_MAP_WORKERS` | Số luồng Map song song (mặc định `5`) |
 
 3. **Save Changes** → Render tự deploy lại
 
 ### Khi chưa có API key
 
-Nút vẫn hoạt động ở chế độ **fallback**: liệt kê nhanh các tiêu đề tin mới nhất thay vì tóm tắt AI.
+Cả hai nút vẫn hoạt động ở chế độ **fallback**: liệt kê nhanh các tiêu đề tin mới theo chuyên mục thay vì tóm tắt AI.
 
 ### Ví dụ gọi API
 
 ```bash
+# Tóm tắt nhanh
 curl -X POST http://localhost:8000/api/ai/brief \
   -H "Content-Type: application/json" \
   -d '{"query":"vnindex","source":"all","hours":24}'
+
+# Bản tin tổng hợp (map-reduce toàn bộ tin)
+curl -X POST http://localhost:8000/api/ai/digest \
+  -H "Content-Type: application/json" \
+  -d '{"source":"all","hours":48}'
 ```
 
 ## Các host miễn phí khác (tham khảo)
