@@ -11,3 +11,13 @@ services:
         value: "600"
       - key: PYTHON_VERSION
         value: "3.12.0"
+      - key: AI_ENABLED
+        value: "true"
+      - key: AI_DAILY_REQUEST_LIMIT
+        value: "50"
+      - key: AI_BRIEF_CACHE_TTL
+        value: "900"
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false

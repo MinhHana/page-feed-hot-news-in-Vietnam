@@ -156,8 +156,13 @@ body {
   z-index: 5;
 }
 
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
 .refresh-btn {
-  justify-self: start;
   border: 1px solid var(--border);
   background: var(--input-bg);
   color: var(--accent);
@@ -179,6 +184,128 @@ body {
 .refresh-btn:disabled {
   opacity: 0.55;
   cursor: wait;
+}
+
+.ai-brief-btn {
+  justify-self: start;
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 248, 200, 0.2), transparent 55%),
+    var(--input-bg);
+  color: #c9a227;
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.25s ease;
+}
+
+.ai-brief-btn:hover:not(:disabled) {
+  color: #ffd700;
+  border-color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.28);
+}
+
+.ai-brief-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ai-brief-btn {
+    color: #ffe566;
+  }
+
+  .ai-brief-btn:hover:not(:disabled) {
+    color: #fff0a8;
+  }
+}
+
+.ai-brief-panel {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 215, 0, 0.35);
+  background:
+    radial-gradient(circle at top right, rgba(255, 215, 0, 0.08), transparent 45%),
+    var(--panel);
+  box-shadow: var(--panel-inset), 0 0 18px rgba(255, 193, 7, 0.08);
+  animation: fade-in 0.25s ease;
+}
+
+.ai-brief-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ai-brief-title {
+  letter-spacing: 0.08em;
+  color: #c9a227;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+.ai-brief-meta {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.ai-brief-close {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ai-brief-close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.ai-brief-content {
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 0.92rem;
+  white-space: normal;
+}
+
+.ai-brief-notice {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px dashed var(--border);
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+.ai-brief-citations {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.85rem;
+}
+
+.ai-brief-citation {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.ai-brief-citation:hover {
+  color: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ai-brief-title {
+    color: #ffe566;
+  }
 }
 
 .search-box {
