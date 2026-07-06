@@ -68,7 +68,7 @@ Nút **✦ TÓM TẮT AI** trên trang web gọi `POST /api/ai/brief` để tóm
 | Biến | Mô tả |
 |------|--------|
 | `XAI_API_KEY` | API key Grok từ [console.x.ai](https://console.x.ai) (dạng `xai-...`) |
-| `AI_GROK_MODEL` | Model Grok (mặc định `grok-3-fast`) |
+| `AI_GROK_MODEL` | Model Grok (mặc định `grok-4.3`) |
 | `AI_ENABLED` | `true` / `false` (mặc định `true`) |
 | `AI_DAILY_REQUEST_LIMIT` | Giới hạn request/ngày/IP (mặc định `50`) |
 | `AI_BRIEF_CACHE_TTL` | Cache tóm tắt (giây, mặc định `900`) |

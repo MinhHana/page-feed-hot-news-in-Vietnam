@@ -41,7 +41,7 @@ def get_ai_config() -> AIConfig:
     return AIConfig(
         enabled=_env_bool("AI_ENABLED", True),
         xai_api_key=os.getenv("XAI_API_KEY", "").strip(),
-        grok_model=os.getenv("AI_GROK_MODEL", "grok-3-fast").strip(),
+        grok_model=os.getenv("AI_GROK_MODEL", "grok-4.3").strip(),
         brief_cache_ttl=int(os.getenv("AI_BRIEF_CACHE_TTL", "900")),
         daily_request_limit=int(os.getenv("AI_DAILY_REQUEST_LIMIT", "50")),
         max_articles=int(os.getenv("AI_BRIEF_MAX_ARTICLES", "40")),
