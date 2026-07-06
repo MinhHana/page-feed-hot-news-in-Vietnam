@@ -402,6 +402,8 @@ def fetch_vneconomy(session: requests.Session, source: dict[str, str]) -> list[d
             continue
         if any(part in href for part in skip_parts):
             continue
+        if "en.vneconomy.vn" in href or href.startswith("https://en."):
+            continue
 
         url = urljoin(source["url"], href)
         if url in seen:
