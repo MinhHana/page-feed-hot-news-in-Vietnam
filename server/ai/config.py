@@ -24,6 +24,10 @@ class AIConfig:
     daily_request_limit: int
     max_articles: int
     request_timeout: int
+    digest_max_articles: int
+    digest_cache_ttl: int
+    digest_daily_limit: int
+    digest_map_workers: int
 
     @property
     def has_grok(self) -> bool:
@@ -46,4 +50,8 @@ def get_ai_config() -> AIConfig:
         daily_request_limit=int(os.getenv("AI_DAILY_REQUEST_LIMIT", "50")),
         max_articles=int(os.getenv("AI_BRIEF_MAX_ARTICLES", "40")),
         request_timeout=int(os.getenv("AI_REQUEST_TIMEOUT", "30")),
+        digest_max_articles=int(os.getenv("AI_DIGEST_MAX_ARTICLES", "200")),
+        digest_cache_ttl=int(os.getenv("AI_DIGEST_CACHE_TTL", "1800")),
+        digest_daily_limit=int(os.getenv("AI_DIGEST_DAILY_LIMIT", "20")),
+        digest_map_workers=int(os.getenv("AI_DIGEST_MAP_WORKERS", "5")),
     )

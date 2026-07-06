@@ -21,6 +21,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from fetch_news import fetch_all_news  # noqa: E402
 
 from server.ai.config import get_ai_config  # noqa: E402
+from server.ai.digest import generate_digest  # noqa: E402
 from server.ai.rate_limit import RateLimitError  # noqa: E402
 from server.ai.summarize import generate_brief  # noqa: E402
 
@@ -45,6 +46,11 @@ class BriefRequest(BaseModel):
     query: str = ""
     source: str = "all"
     hours: int = Field(default=24, ge=1, le=168)
+
+
+class DigestRequest(BaseModel):
+    source: str = "all"
+    hours: int = Field(default=48, ge=1, le=168)
 
 
 def get_cached_news(force_refresh: bool = False) -> dict[str, Any]:
@@ -90,6 +96,8 @@ def ai_status() -> dict[str, Any]:
         "grokModel": config.grok_model if config.has_grok else None,
         "dailyRequestLimit": config.daily_request_limit,
         "briefCacheTtl": config.brief_cache_ttl,
+        "digestDailyLimit": config.digest_daily_limit,
+        "digestCacheTtl": config.digest_cache_ttl,
         "message": (
             "AI sẵn sàng (Grok)."
             if config.is_configured
@@ -116,6 +124,28 @@ def ai_brief(request: Request, body: BriefRequest) -> dict[str, Any]:
             status_code=429,
             detail={
                 "message": "Đã vượt giới hạn tóm tắt AI trong ngày. Vui lòng thử lại sau.",
+                "retryAfter": exc.retry_after_seconds,
+            },
+        ) from exc
+
+
+@app.post("/api/ai/digest")
+def ai_digest(request: Request, body: DigestRequest) -> dict[str, Any]:
+    payload = get_cached_news(force_refresh=False)
+    articles = payload.get("articles") or []
+
+    try:
+        return generate_digest(
+            articles,
+            source=body.source,
+            hours=body.hours,
+            client_key=_client_key(request),
+        )
+    except RateLimitError as exc:
+        raise HTTPException(
+            status_code=429,
+            detail={
+                "message": "Đã vượt giới hạn bản tin tổng hợp trong ngày. Vui lòng thử lại sau.",
                 "retryAfter": exc.retry_after_seconds,
             },
         ) from exc
