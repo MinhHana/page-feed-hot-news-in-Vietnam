@@ -197,9 +197,14 @@ def extract_published_at_from_html(html: str) -> str | None:
         match = pattern.search(html)
         if match:
             try:
-                return to_iso(date_parser.parse(match.group(1)))
+                parsed = date_parser.parse(match.group(1))
             except (ValueError, TypeError):
-                pass
+                continue
+            # VnEconomy gắn nhãn giờ Việt Nam bằng "Z" (UTC), khiến bị lệch +7h.
+            # Với các trang scrape (báo VN), coi thời gian UTC là giờ VN local.
+            if parsed.utcoffset() == timedelta(0):
+                parsed = parsed.replace(tzinfo=VN_TZ)
+            return to_iso(parsed)
 
     match = ARTICLE_META_TIME_PATTERN.search(html)
     if match:
