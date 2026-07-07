@@ -1,11 +1,14 @@
 const API_URL = "/api/news";
 const REFRESH_MS = 2 * 60 * 1000;
+const STORAGE_KEY = "vnnews:lastFeed:v1";
+const SKELETON_COUNT = 8;
 
 const state = {
   articles: [],
   sources: [],
   activeSource: "all",
   query: "",
+  hydratedFromCache: false,
 };
 
 const elements = {
@@ -160,6 +163,60 @@ function renderArticles() {
     .join("");
 }
 
+function renderSkeleton() {
+  if (!elements.list) return;
+
+  const item = `
+    <li class="news-item news-skeleton" aria-hidden="true">
+      <div class="news-item-body">
+        <div class="news-content">
+          <div class="skeleton-line skeleton-meta"></div>
+          <div class="skeleton-line skeleton-title"></div>
+          <div class="skeleton-line skeleton-title short"></div>
+          <div class="skeleton-line skeleton-text"></div>
+        </div>
+      </div>
+    </li>`;
+
+  elements.list.innerHTML = item.repeat(SKELETON_COUNT);
+  if (elements.empty) elements.empty.classList.add("hidden");
+}
+
+function saveToCache(payload) {
+  try {
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ payload, savedAt: Date.now() })
+    );
+  } catch (error) {
+    // localStorage đầy hoặc bị chặn — bỏ qua, không ảnh hưởng chức năng.
+  }
+}
+
+function hydrateFromCache() {
+  let cached;
+  try {
+    cached = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+  } catch (error) {
+    cached = null;
+  }
+
+  const payload = cached && cached.payload;
+  if (!payload || !Array.isArray(payload.articles) || !payload.articles.length) {
+    return false;
+  }
+
+  state.articles = payload.articles;
+  state.sources = buildSourceList(payload);
+  state.hydratedFromCache = true;
+
+  elements.updatedAt.textContent = formatUpdatedAt(payload.updatedAt);
+  renderFilters();
+  renderArticles();
+  setStatus("Bản lưu · đang cập nhật...", false);
+  return true;
+}
+
 function setStatus(message, isLive = true) {
   elements.statusText.textContent = message;
   elements.statusDot.classList.toggle("live", isLive);
@@ -191,7 +248,10 @@ async function fetchNewsPayload(forceRefresh = false) {
 }
 
 async function loadNews(forceRefresh = false) {
-  setStatus("Đang tải dữ liệu...", false);
+  if (!state.articles.length) {
+    renderSkeleton();
+  }
+  setStatus(state.hydratedFromCache ? "Đang cập nhật..." : "Đang tải dữ liệu...", false);
   elements.error.classList.add("hidden");
 
   if (elements.refreshBtn) {
@@ -202,17 +262,25 @@ async function loadNews(forceRefresh = false) {
     const payload = await fetchNewsPayload(forceRefresh);
     state.articles = payload.articles || [];
     state.sources = buildSourceList(payload);
+    state.hydratedFromCache = false;
+    saveToCache(payload);
 
     elements.updatedAt.textContent = formatUpdatedAt(payload.updatedAt);
     renderFilters();
     renderArticles();
     setStatus(`LIVE · ${payload.total || state.articles.length} tin`, true);
   } catch (error) {
-    setStatus("Không tải được dữ liệu", false);
-    elements.error.textContent =
-      "Không tải được dữ liệu tin. Nếu dùng GitHub Pages, hãy deploy lên Render (xem README).";
-    elements.error.classList.remove("hidden");
     console.error("Feed load failed:", error);
+    if (state.articles.length) {
+      // Đã có dữ liệu (bản lưu) hiển thị — không xoá, chỉ báo trạng thái.
+      setStatus("Mất kết nối · đang hiển thị bản lưu", false);
+    } else {
+      if (elements.list) elements.list.innerHTML = "";
+      setStatus("Không tải được dữ liệu", false);
+      elements.error.textContent =
+        "Không tải được dữ liệu tin. Nếu dùng GitHub Pages, hãy deploy lên Render (xem README).";
+      elements.error.classList.remove("hidden");
+    }
   } finally {
     if (elements.refreshBtn) {
       elements.refreshBtn.disabled = false;
@@ -240,6 +308,7 @@ if (elements.refreshBtn) {
   });
 }
 
+hydrateFromCache();
 loadNews();
 setInterval(() => loadNews(false), REFRESH_MS);
 
