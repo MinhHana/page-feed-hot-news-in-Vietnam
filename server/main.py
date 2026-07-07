@@ -6,6 +6,7 @@ import os
 import sys
 import threading
 import time
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
 
@@ -28,7 +29,16 @@ from server.ai.summarize import generate_brief  # noqa: E402
 CACHE_TTL_SECONDS = int(os.getenv("NEWS_CACHE_TTL", "600"))
 PORT = int(os.getenv("PORT", "8000"))
 
-app = FastAPI(title="Vietnam News Matrix Feed", version="1.1.0")
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    # Hâm nóng cache ngay khi server bật (chạy nền, không chặn khởi động)
+    # để người dùng đầu tiên không phải chờ lần fetch ~80s.
+    trigger_refresh()
+    yield
+
+
+app = FastAPI(title="Vietnam News Matrix Feed", version="1.1.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -38,8 +48,10 @@ app.add_middleware(
 )
 
 _cache_lock = threading.Lock()
+_refresh_lock = threading.Lock()
 _cache_payload: dict[str, Any] | None = None
 _cache_fetched_at = 0.0
+_refreshing = False
 
 
 class BriefRequest(BaseModel):
@@ -53,18 +65,58 @@ class DigestRequest(BaseModel):
     hours: int = Field(default=48, ge=1, le=168)
 
 
-def get_cached_news(force_refresh: bool = False) -> dict[str, Any]:
+def _fetch_and_store() -> dict[str, Any]:
+    """Tải feed mới và ghi vào cache. Chỉ một luồng chạy nhờ _refresh_lock."""
     global _cache_payload, _cache_fetched_at
 
+    payload = fetch_all_news()
     with _cache_lock:
-        now = time.time()
-        is_stale = _cache_payload is None or (now - _cache_fetched_at) > CACHE_TTL_SECONDS
+        _cache_payload = payload
+        _cache_fetched_at = time.time()
+    return payload
 
-        if force_refresh or is_stale:
-            _cache_payload = fetch_all_news()
-            _cache_fetched_at = now
 
-        return _cache_payload
+def _background_refresh() -> None:
+    global _refreshing
+    try:
+        with _refresh_lock:
+            _fetch_and_store()
+    finally:
+        with _cache_lock:
+            _refreshing = False
+
+
+def trigger_refresh() -> None:
+    """Làm mới cache ở luồng nền, không chặn request. Bỏ qua nếu đang chạy."""
+    global _refreshing
+    with _cache_lock:
+        if _refreshing:
+            return
+        _refreshing = True
+    threading.Thread(target=_background_refresh, daemon=True).start()
+
+
+def get_cached_news(force_refresh: bool = False) -> dict[str, Any]:
+    """Stale-while-revalidate: luôn trả cache ngay, làm mới ở nền khi cũ.
+
+    Chỉ chặn ở lần cold start đầu tiên khi chưa có dữ liệu nào.
+    """
+    with _cache_lock:
+        payload = _cache_payload
+        age = time.time() - _cache_fetched_at
+
+    if payload is None:
+        # Cold start: buộc phải chờ một lần (chỉ một luồng fetch nhờ _refresh_lock).
+        with _refresh_lock:
+            with _cache_lock:
+                if _cache_payload is not None:
+                    return _cache_payload
+            return _fetch_and_store()
+
+    if force_refresh or age > CACHE_TTL_SECONDS:
+        trigger_refresh()
+
+    return payload
 
 
 def _client_key(request: Request) -> str:
