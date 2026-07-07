@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
@@ -80,7 +81,15 @@ ARTICLE_META_TIME_PATTERN = re.compile(
     re.IGNORECASE,
 )
 IMAGE_UPLOAD_DATE_PATTERN = re.compile(r"/uploads/(\d{4})/(\d{2})/(\d{2})/")
-ARTICLE_DATE_FETCH_WORKERS = 8
+ARTICLE_DATE_FETCH_WORKERS = 16
+# Timeout riêng (ngắn hơn) cho việc tải từng trang bài để lấy giờ đăng.
+ARTICLE_FETCH_TIMEOUT = 8
+
+# Cache giờ đăng theo URL để các lần làm mới sau chỉ tải bài mới xuất hiện,
+# thay vì tải lại toàn bộ ~193 trang bài của VnEconomy/Vietstock mỗi lần.
+_PUBLISHED_AT_CACHE: dict[str, str | None] = {}
+_PUBLISHED_AT_CACHE_LOCK = threading.Lock()
+_PUBLISHED_AT_CACHE_MAX = 4000
 
 
 def make_session() -> requests.Session:
@@ -218,11 +227,20 @@ def extract_published_at_from_html(html: str) -> str | None:
 def fetch_article_published_at(url: str) -> str | None:
     session = make_session()
     try:
-        response = session.get(url, timeout=REQUEST_TIMEOUT)
+        response = session.get(url, timeout=ARTICLE_FETCH_TIMEOUT)
         response.raise_for_status()
         return extract_published_at_from_html(response.text)
     except Exception:  # noqa: BLE001
         return None
+
+
+def _prune_published_at_cache(keep_urls: set[str]) -> None:
+    """Giữ cache không phình vô hạn: khi quá ngưỡng, bỏ URL không còn trong feed."""
+    if len(_PUBLISHED_AT_CACHE) <= _PUBLISHED_AT_CACHE_MAX:
+        return
+    for cached_url in list(_PUBLISHED_AT_CACHE.keys()):
+        if cached_url not in keep_urls:
+            _PUBLISHED_AT_CACHE.pop(cached_url, None)
 
 
 def fetch_published_at_map(urls: list[str]) -> dict[str, str | None]:
@@ -230,14 +248,33 @@ def fetch_published_at_map(urls: list[str]) -> dict[str, str | None]:
     if not urls:
         return published_at_map
 
-    with ThreadPoolExecutor(max_workers=ARTICLE_DATE_FETCH_WORKERS) as executor:
-        futures = {executor.submit(fetch_article_published_at, url): url for url in urls}
-        for future in as_completed(futures):
-            url = futures[future]
-            try:
-                published_at_map[url] = future.result()
-            except Exception:  # noqa: BLE001
-                published_at_map[url] = None
+    unique_urls = list(dict.fromkeys(urls))
+
+    to_fetch: list[str] = []
+    with _PUBLISHED_AT_CACHE_LOCK:
+        for url in unique_urls:
+            if url in _PUBLISHED_AT_CACHE:
+                published_at_map[url] = _PUBLISHED_AT_CACHE[url]
+            else:
+                to_fetch.append(url)
+
+    if to_fetch:
+        fetched: dict[str, str | None] = {}
+        with ThreadPoolExecutor(max_workers=ARTICLE_DATE_FETCH_WORKERS) as executor:
+            futures = {
+                executor.submit(fetch_article_published_at, url): url for url in to_fetch
+            }
+            for future in as_completed(futures):
+                url = futures[future]
+                try:
+                    fetched[url] = future.result()
+                except Exception:  # noqa: BLE001
+                    fetched[url] = None
+
+        with _PUBLISHED_AT_CACHE_LOCK:
+            _PUBLISHED_AT_CACHE.update(fetched)
+            _prune_published_at_cache(set(unique_urls))
+        published_at_map.update(fetched)
 
     return published_at_map
 
